@@ -1,0 +1,357 @@
+100_25
+
+Model,Threads,Transitions,array_size,ns_per_trans
+sum mismatch (1277 != 1276)
+Unsynchronized,16,1000,25,75004.8
+sum mismatch (1277 != 1274)
+Unsynchronized,16,1000,25,67094.3
+sum mismatch (1277 != 1276)
+Unsynchronized,16,1000,25,60147.6
+sum mismatch (1277 != 1276)
+Unsynchronized,16,1000,25,69299.6
+Unsynchronized,16,1000,25,67876.1
+sum mismatch (1277 != 1273)
+Unsynchronized,16,1000,25,63890.8
+sum mismatch (1277 != 1276)
+Unsynchronized,16,1000,25,75947.0
+sum mismatch (1277 != 1271)
+Unsynchronized,16,1000,25,53476.5
+sum mismatch (1277 != 1279)
+Unsynchronized,16,1000,25,59969.4
+sum mismatch (1277 != 1281)
+Unsynchronized,16,1000,25,84093.6
+sum mismatch (1277 != 1320)
+Unsynchronized,16,100000,25,3106.72
+sum mismatch (1277 != 1357)
+Unsynchronized,16,100000,25,2927.18
+sum mismatch (1277 != 1515)
+Unsynchronized,16,100000,25,3480.39
+sum mismatch (1277 != 1652)
+Unsynchronized,16,100000,25,3337.85
+sum mismatch (1277 != 1302)
+Unsynchronized,16,100000,25,3476.73
+sum mismatch (1277 != 1134)
+Unsynchronized,16,100000,25,3251.96
+sum mismatch (1277 != 1410)
+Unsynchronized,16,100000,25,3330.74
+sum mismatch (1277 != 1526)
+Unsynchronized,16,100000,25,3354.65
+sum mismatch (1277 != 1374)
+Unsynchronized,16,100000,25,3392.58
+sum mismatch (1277 != 1382)
+Unsynchronized,16,100000,25,3604.67
+sum mismatch (1277 != 1566)
+Unsynchronized,16,10000000,25,789.147
+sum mismatch (1277 != 1613)
+Unsynchronized,16,10000000,25,1226.87
+sum mismatch (1277 != 1395)
+Unsynchronized,16,10000000,25,745.956
+sum mismatch (1277 != 748)
+Unsynchronized,16,10000000,25,1246.32
+sum mismatch (1277 != 1417)
+Unsynchronized,16,10000000,25,1174.63
+sum mismatch (1277 != 1342)
+Unsynchronized,16,10000000,25,1203.17
+sum mismatch (1277 != 1366)
+Unsynchronized,16,10000000,25,852.909
+sum mismatch (1277 != 991)
+Unsynchronized,16,10000000,25,1306.24
+sum mismatch (1277 != 866)
+Unsynchronized,16,10000000,25,1262.79
+sum mismatch (1277 != 1375)
+Unsynchronized,16,10000000,25,834.739
+
+
+100_500
+Model,Threads,Transitions,array_size,ns_per_trans
+sum mismatch (24655 != 24656)
+Unsynchronized,16,1000,500,60654.1
+sum mismatch (24655 != 24654)
+Unsynchronized,16,1000,500,60087.6
+Unsynchronized,16,1000,500,57925.7
+Unsynchronized,16,1000,500,76338.9
+Unsynchronized,16,1000,500,72744.8
+Unsynchronized,16,1000,500,62735.3
+Unsynchronized,16,1000,500,71706.1
+sum mismatch (24655 != 24654)
+Unsynchronized,16,1000,500,70034.8
+Unsynchronized,16,1000,500,58588.0
+sum mismatch (24655 != 24656)
+Unsynchronized,16,1000,500,72913.9
+sum mismatch (24655 != 24718)
+Unsynchronized,16,100000,500,3113.71
+sum mismatch (24655 != 24654)
+Unsynchronized,16,100000,500,3489.55
+sum mismatch (24655 != 24714)
+Unsynchronized,16,100000,500,3345.60
+sum mismatch (24655 != 24600)
+Unsynchronized,16,100000,500,2960.85
+sum mismatch (24655 != 24599)
+Unsynchronized,16,100000,500,3025.50
+sum mismatch (24655 != 24632)
+Unsynchronized,16,100000,500,3222.25
+sum mismatch (24655 != 24615)
+Unsynchronized,16,100000,500,3050.00
+sum mismatch (24655 != 24650)
+Unsynchronized,16,100000,500,2911.40
+sum mismatch (24655 != 24488)
+Unsynchronized,16,100000,500,3137.16
+sum mismatch (24655 != 24657)
+Unsynchronized,16,100000,500,3250.92
+sum mismatch (24655 != 24568)
+Unsynchronized,16,10000000,500,1100.45
+sum mismatch (24655 != 22610)
+Unsynchronized,16,10000000,500,1098.56
+sum mismatch (24655 != 23156)
+Unsynchronized,16,10000000,500,1108.97
+sum mismatch (24655 != 23381)
+Unsynchronized,16,10000000,500,1204.87
+sum mismatch (24655 != 24043)
+Unsynchronized,16,10000000,500,1153.33
+sum mismatch (24655 != 23148)
+Unsynchronized,16,10000000,500,1085.07
+sum mismatch (24655 != 21840)
+Unsynchronized,16,10000000,500,1139.31
+sum mismatch (24655 != 24749)
+Unsynchronized,16,10000000,500,1034.57
+sum mismatch (24655 != 21482)
+Unsynchronized,16,10000000,500,1067.74
+sum mismatch (24655 != 23138)
+Unsynchronized,16,10000000,500,1163.57
+
+
+
+100_2500
+Model,Threads,Transitions,array_size,ns_per_trans
+Unsynchronized,16,1000,2500,71956.8
+Unsynchronized,16,1000,2500,60052.9
+sum mismatch (122738 != 122737)
+Unsynchronized,16,1000,2500,56064.4
+Unsynchronized,16,1000,2500,68993.6
+Unsynchronized,16,1000,2500,74836.8
+Unsynchronized,16,1000,2500,64212.2
+Unsynchronized,16,1000,2500,67913.1
+Unsynchronized,16,1000,2500,62905.4
+Unsynchronized,16,1000,2500,62285.4
+sum mismatch (122738 != 122739)
+Unsynchronized,16,1000,2500,67756.1
+sum mismatch (122738 != 122728)
+Unsynchronized,16,100000,2500,2815.40
+sum mismatch (122738 != 122763)
+Unsynchronized,16,100000,2500,3548.83
+sum mismatch (122738 != 122748)
+Unsynchronized,16,100000,2500,3059.37
+sum mismatch (122738 != 122745)
+Unsynchronized,16,100000,2500,3246.34
+sum mismatch (122738 != 122744)
+Unsynchronized,16,100000,2500,2889.77
+sum mismatch (122738 != 122720)
+Unsynchronized,16,100000,2500,3306.71
+sum mismatch (122738 != 122717)
+Unsynchronized,16,100000,2500,3351.12
+sum mismatch (122738 != 122746)
+Unsynchronized,16,100000,2500,3107.31
+sum mismatch (122738 != 122745)
+Unsynchronized,16,100000,2500,3049.09
+sum mismatch (122738 != 122722)
+Unsynchronized,16,100000,2500,3157.59
+sum mismatch (122738 != 122044)
+Unsynchronized,16,10000000,2500,731.544
+sum mismatch (122738 != 121457)
+Unsynchronized,16,10000000,2500,700.009
+sum mismatch (122738 != 121158)
+Unsynchronized,16,10000000,2500,765.411
+sum mismatch (122738 != 122222)
+Unsynchronized,16,10000000,2500,1005.08
+sum mismatch (122738 != 122081)
+Unsynchronized,16,10000000,2500,735.205
+sum mismatch (122738 != 122549)
+Unsynchronized,16,10000000,2500,866.921
+sum mismatch (122738 != 121288)
+Unsynchronized,16,10000000,2500,842.029
+sum mismatch (122738 != 121691)
+Unsynchronized,16,10000000,2500,778.417
+sum mismatch (122738 != 122398)
+Unsynchronized,16,10000000,2500,876.793
+sum mismatch (122738 != 119900)
+Unsynchronized,16,10000000,2500,881.642
+
+
+
+30_25
+Model,Threads,Transitions,array_size,ns_per_trans
+sum mismatch (352 != 354)
+Unsynchronized,16,1000,25,74087.3
+sum mismatch (352 != 358)
+Unsynchronized,16,1000,25,76713.5
+sum mismatch (352 != 357)
+Unsynchronized,16,1000,25,60374.9
+sum mismatch (352 != 354)
+Unsynchronized,16,1000,25,73487.0
+sum mismatch (352 != 346)
+Unsynchronized,16,1000,25,65303.9
+sum mismatch (352 != 355)
+Unsynchronized,16,1000,25,72011.1
+sum mismatch (352 != 354)
+Unsynchronized,16,1000,25,67013.2
+sum mismatch (352 != 347)
+Unsynchronized,16,1000,25,72455.8
+sum mismatch (352 != 355)
+Unsynchronized,16,1000,25,74955.5
+sum mismatch (352 != 357)
+Unsynchronized,16,1000,25,67968.4
+sum mismatch (352 != 279)
+Unsynchronized,16,100000,25,3426.68
+sum mismatch (352 != 378)
+Unsynchronized,16,100000,25,3048.50
+sum mismatch (352 != 373)
+Unsynchronized,16,100000,25,3388.63
+sum mismatch (352 != 347)
+Unsynchronized,16,100000,25,3649.96
+sum mismatch (352 != 534)
+Unsynchronized,16,100000,25,2752.48
+sum mismatch (352 != 419)
+Unsynchronized,16,100000,25,3031.24
+sum mismatch (352 != 301)
+Unsynchronized,16,100000,25,3836.83
+sum mismatch (352 != 393)
+Unsynchronized,16,100000,25,3912.84
+sum mismatch (352 != 372)
+Unsynchronized,16,100000,25,3524.09
+sum mismatch (352 != 473)
+Unsynchronized,16,100000,25,3255.26
+sum mismatch (352 != 347)
+Unsynchronized,16,10000000,25,1297.83
+sum mismatch (352 != 321)
+Unsynchronized,16,10000000,25,1431.34
+sum mismatch (352 != 282)
+Unsynchronized,16,10000000,25,884.587
+sum mismatch (352 != 411)
+Unsynchronized,16,10000000,25,824.069
+sum mismatch (352 != 408)
+Unsynchronized,16,10000000,25,1409.78
+sum mismatch (352 != 302)
+Unsynchronized,16,10000000,25,858.592
+sum mismatch (352 != 442)
+Unsynchronized,16,10000000,25,1392.57
+sum mismatch (352 != 378)
+Unsynchronized,16,10000000,25,1305.88
+sum mismatch (352 != 475)
+Unsynchronized,16,10000000,25,1408.22
+sum mismatch (352 != 337)
+Unsynchronized,16,10000000,25,1293.72
+
+
+
+30_500
+Model,Threads,Transitions,array_size,ns_per_trans
+Unsynchronized,16,1000,500,76264.8
+sum mismatch (7522 != 7521)
+Unsynchronized,16,1000,500,60002.3
+Unsynchronized,16,1000,500,52697.5
+Unsynchronized,16,1000,500,54413.5
+Unsynchronized,16,1000,500,54702.7
+sum mismatch (7522 != 7523)
+Unsynchronized,16,1000,500,62181.8
+sum mismatch (7522 != 7521)
+Unsynchronized,16,1000,500,64975.2
+Unsynchronized,16,1000,500,67580.1
+sum mismatch (7522 != 7521)
+Unsynchronized,16,1000,500,68124.4
+Unsynchronized,16,1000,500,69440.3
+sum mismatch (7522 != 7436)
+Unsynchronized,16,100000,500,3223.16
+sum mismatch (7522 != 7479)
+Unsynchronized,16,100000,500,3969.48
+sum mismatch (7522 != 7502)
+Unsynchronized,16,100000,500,3283.72
+sum mismatch (7522 != 7433)
+Unsynchronized,16,100000,500,3175.65
+sum mismatch (7522 != 7463)
+Unsynchronized,16,100000,500,3114.44
+sum mismatch (7522 != 7508)
+Unsynchronized,16,100000,500,3490.53
+sum mismatch (7522 != 7552)
+Unsynchronized,16,100000,500,3455.92
+sum mismatch (7522 != 7506)
+Unsynchronized,16,100000,500,3147.59
+sum mismatch (7522 != 7494)
+Unsynchronized,16,100000,500,3205.35
+sum mismatch (7522 != 7486)
+Unsynchronized,16,100000,500,3398.99
+sum mismatch (7522 != 7111)
+Unsynchronized,16,10000000,500,1036.48
+sum mismatch (7522 != 7056)
+Unsynchronized,16,10000000,500,1098.12
+sum mismatch (7522 != 7266)
+Unsynchronized,16,10000000,500,1030.25
+sum mismatch (7522 != 7961)
+Unsynchronized,16,10000000,500,1174.02
+sum mismatch (7522 != 7209)
+Unsynchronized,16,10000000,500,1042.13
+sum mismatch (7522 != 6642)
+Unsynchronized,16,10000000,500,1137.60
+sum mismatch (7522 != 7429)
+Unsynchronized,16,10000000,500,1093.65
+sum mismatch (7522 != 8088)
+Unsynchronized,16,10000000,500,1139.89
+sum mismatch (7522 != 6982)
+Unsynchronized,16,10000000,500,1186.04
+sum mismatch (7522 != 7273)
+Unsynchronized,16,10000000,500,1115.45
+
+
+
+30_2500
+Model,Threads,Transitions,array_size,ns_per_trans
+Unsynchronized,16,1000,2500,63432.6
+Unsynchronized,16,1000,2500,59045.6
+Unsynchronized,16,1000,2500,57498.6
+Unsynchronized,16,1000,2500,70105.4
+Unsynchronized,16,1000,2500,73259.6
+sum mismatch (36079 != 36078)
+Unsynchronized,16,1000,2500,57199.8
+Unsynchronized,16,1000,2500,65050.1
+Unsynchronized,16,1000,2500,60135.9
+Unsynchronized,16,1000,2500,71174.7
+Unsynchronized,16,1000,2500,58739.7
+sum mismatch (36079 != 36080)
+Unsynchronized,16,100000,2500,3025.55
+sum mismatch (36079 != 36088)
+Unsynchronized,16,100000,2500,2712.59
+sum mismatch (36079 != 36045)
+Unsynchronized,16,100000,2500,3416.04
+sum mismatch (36079 != 36071)
+Unsynchronized,16,100000,2500,3339.56
+sum mismatch (36079 != 36066)
+Unsynchronized,16,100000,2500,3155.41
+sum mismatch (36079 != 36063)
+Unsynchronized,16,100000,2500,2776.92
+sum mismatch (36079 != 36086)
+Unsynchronized,16,100000,2500,2995.04
+sum mismatch (36079 != 36067)
+Unsynchronized,16,100000,2500,3356.50
+sum mismatch (36079 != 36085)
+Unsynchronized,16,100000,2500,3046.68
+sum mismatch (36079 != 36072)
+Unsynchronized,16,100000,2500,3308.07
+sum mismatch (36079 != 36321)
+Unsynchronized,16,10000000,2500,915.899
+sum mismatch (36079 != 36108)
+Unsynchronized,16,10000000,2500,785.887
+sum mismatch (36079 != 35786)
+Unsynchronized,16,10000000,2500,835.069
+sum mismatch (36079 != 36489)
+Unsynchronized,16,10000000,2500,765.833
+sum mismatch (36079 != 35961)
+Unsynchronized,16,10000000,2500,909.049
+sum mismatch (36079 != 35837)
+Unsynchronized,16,10000000,2500,792.079
+sum mismatch (36079 != 35731)
+Unsynchronized,16,10000000,2500,896.061
+sum mismatch (36079 != 36390)
+Unsynchronized,16,10000000,2500,727.370
+sum mismatch (36079 != 36033)
+Unsynchronized,16,10000000,2500,783.862
+sum mismatch (36079 != 36766)
+Unsynchronized,16,10000000,2500,750.727

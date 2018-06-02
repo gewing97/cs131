@@ -1,0 +1,33 @@
+hint: look at previous hw2 (on DNA) 
+    solution available
+
+simple matcher for hw2:
+    
+    should match Frag []
+    let match_empty frag accept = accept frag
+
+
+Optional : "kinda like modifier for exisiting types"
+    Optional int
+        either an int or None
+    returning None is like returning null pointer 
+
+    look up syntax issues for handling None
+
+type accepter = fragment->fragment option
+    acceptor is a function that takes a fragment and returns a fragment option
+        ie fragment or none
+
+let rec match_junk k frag accept =
+    match accept frag with
+        | None -> 
+            (if k = 0
+                then None 
+                else match frag with
+                    | [] -> None
+                    | _::tail -> match_junk (k-1) tail accept) (*ie try to accept some shorter piece of junk*)
+        | ok->ok
+
+int -> symbol list -> (symbol list -> symbol list optional) -> symbol list optional
+
+k is the max size of junk

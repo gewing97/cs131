@@ -1,0 +1,33 @@
+F# functional, microsoft, cross platform
+    based on .NET framework, hard to learn?
+        time consuming to learn possibly and possibly badd code
+
+Vala
+    GNOME project : -> C code -> machine code
+    object orientation for C
+    probably efficient case C
+
+Crystal - compiled (looks like ruby)
+    union types (Int | String)
+    no nullable types (Nil)
+
+
+Think about runtime performance
+    compiled or interpreted?
+    type checking: static or dynamic?
+        strongy or weakly?
+
+
+Templates(C) vs Generics(Java)
+    Templates recompiled each time at compile time
+    Generics only one at compile time
+
+
+
+Consider for report
+    -type checking
+    -memory management (gc or explicit)
+
+
+
+Look at language benchmark site

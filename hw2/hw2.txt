@@ -1,0 +1,78 @@
+-------------------------------------------------------------------------------
+The final implementation I used to solve the problem was a result of my prior 
+implementations failing. When prior solutions failed, I reread the 
+spec and used the sample derivation. That is, for every nonterminal, 
+substitute in the left most rule associated with it and work left 
+to right within that rule. When there are no more applicable rules to 
+follow, attempt the acceptor with the given derivation.
+My previous implementation did not employ the method of expanding 
+rules into the current set of applicable rules. Instead, it 
+"followed" the rule it was looking at to see if it lead to a terminal 
+that matched the terminal (or terminals) at the start of the frag. 
+I tried to approach the problem incrementally by finding a suffix first 
+before creating the derivation. This mental approach failed due to me 
+thinking of the problem as searching a tree rather than constructing a tree. 
+I was able to complete the implementation for simple cases, but more intense 
+test cases proved problematic. The core of the problem was in the 
+nature of knowing when to apply the acceptor. 
+Because I was searching through the tree for a "good" result
+(something the acceptor would take and return something other than None)
+I would apply the acceptor far too often, and would thus return an 
+incomplete derivation for longer fragments. Additionally, I tried
+to apply a notion of "progress" by passing back the state of the suffix
+to the calling function (back a recursive call). By checking the length, 
+I could establish that matches had been made or otherwise. 
+This proved overly complicated and did not solve my acceptor problem.
+In the end, I (surprisingly quickly due to the more congruent logic) 
+transformed my matching solution to pass information forward rather 
+than trying to pass it back. This resolved into the method described above
+of substiting values into the current set of applicable rules. Thus functions
+farther down the recursion know more information about the set of applicable
+rules and can simply call accept when there are no more applicable rules.
+Once I recognized that logic, I found the implementation much simpler than 
+creating functions higher up the recursion that could assess 
+whether or not to call the acceptor on whatever suffix and derivation 
+they were returned.
+
+-------------------------------------------------------------------------------
+My parser is susceptible to blind alleys and infinte loops. 
+Per the spec, the parser does not need to be capable of handling blind alleys,
+but such a grammar could cause it to enter an infinte loop.
+If the blind alley rule would expand the size of the current set of 
+applicable rules to be greater than the size of the fragment, 
+then my parser would be able to escape the blind alley and return None.
+As a remnant of my original implementation, my parser checks that the length
+of the fragment (or remaining suffix) is greater than the current length 
+of the set of applicable rules. If such condition is not acheived, then there 
+is no way for the set of applicable rules (assuming each rule leads to a
+nonterminal and not some empty set) to resolve to the characters in 
+the fragment. 
+I originally had this condition to precheck whether a non terminals rule
+list was longer than the remaining portion of the fragment, attempting
+to avoid the cost of searching through a portion of the tree that would 
+lead to nothing useful. As a result, this condition also ensures
+that the set of applicable rules never exceeds the size of the fragment, 
+combating a possbile infinte loop.
+
+However, the code below does cause my parser to go into an infinite loop:
+
+#type breakable =
+#    | Start | X | Y 
+
+#let break_me = 
+#    (Start, 
+#        function
+#        | Start -> [[N X]]
+#        | X -> [[N Y]]
+#        | Y -> [[N X]; [T "y"]]
+#    )
+
+#parse_prefix break_me accept_all ["y"];;
+
+Because my parser tests the first rule in each alternative list
+first, it will go into an infinite loop for the above grammar. Additionally,
+it can never break out of the infinite loop due to the substition of rules 
+never increasing the size of the set of applicable rules. 
+Given that the fragment has a size of 1 and all of the possible 
+paths (for my naive parser) lead to a non terminal rule with the size of 1, 
+the parser never realizes it is in an infinite loop.
