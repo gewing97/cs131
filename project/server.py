@@ -26,10 +26,12 @@ def talks_with(server_name):
 async def server_routine(reader, writer):
     print("hello")
     while True :
-        received = await reader.read(100)
+        received = await reader.readuntil(b'\n')
         if received == b'':
             break
-        print(received.decode())
+        message = received.decode()
+        addr = writer.get_extra_info('peername')
+        print("Received %r from %r" % (message, addr))
         writer.write("received {}".format(received.decode()).encode())
 
     writer.write("hello".encode())
