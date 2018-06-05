@@ -75,10 +75,8 @@ async def connection_routine(server_port, message):
     return server_port, reader, writer
 
 def handle_latlon(lat_lon_str):
-    print(lat_lon_str)
     if(lat_lon_str[0] == "+"):
         lat_lon = lat_lon_str.strip("+")
-        print(lat_lon)
         pos_split = lat_lon.split("+")
         neg_split = lat_lon.split("-")
         if(len(pos_split) == 2):
@@ -114,9 +112,10 @@ async def handle_iamat(message, writer, received_time):
             print(lon)
             skew = received_time - float(message[3])
             skew_str = "+{0}".format(skew) if skew >= 0 else "{0}".format(skew)
-            response = "AT {0} {1} {2}\n".format(sys.argv[1],skew_str, " ".join(message[1:]))   
+            response = "AT {0} {1} {2}".format(sys.argv[1],skew_str, " ".join(message[1:]))   
             user_data[message[1]] = [sys.argv[1], skew_str, lat, lon, message[3]]
-            writer.write(response.encode())
+            writer.write("{0}\n".format(response).encode())
+            await propagate_message(response)
             return 0
         else:          
             return 1
@@ -128,11 +127,9 @@ async def handle_whatsat(message, writer):
     try:
         if len(message) == 4:
             curr_user = user_data[message[1]]
-
             lat = "+{0}".format(curr_user[2]) if curr_user[2] >= 0 else "{0}".format(curr_user[2])
             lon = "+{0}".format(curr_user[3]) if curr_user[3] >= 0 else "{0}".format(curr_user[3])
             lat_lon = "{0}{1}".format(lat,lon)
-
             response = "AT {0} {1} {2} {3} {4}\n".format(curr_user[0],curr_user[1], message[1], lat_lon, curr_user[4])           
             writer.write(response.encode())
             return 0
@@ -140,6 +137,10 @@ async def handle_whatsat(message, writer):
             return 1
     except:
         return 1
+
+async def handle_at(message):
+    lat, lon = handle_latlon(message[4])
+    user_data[message[3]] = [message[1],message[2], lat, lon, message[5]]
 
 
 async def server_routine(reader, writer):
@@ -157,7 +158,11 @@ async def server_routine(reader, writer):
                 elif (received_decomp[0] == "WHATSAT"):
                     error = await handle_whatsat(received_decomp, writer)
                 elif (received_decomp[0] == "AT"):
-                    await propagate_message(received_decoded)
+                    if (len(received_decomp) >= 6):
+                        error = await handle_at(received_decomp)
+                        await propagate_message(received_decoded)
+                    else:
+                        error = 1
                 else:
                     error = 1
             else:
