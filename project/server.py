@@ -1,13 +1,15 @@
 #!/usr/bin/python
 import time
 import asyncio
-import datetime
+import aiohttp
+import json
 import sys
+import re
+
 
 loop = asyncio.get_event_loop()
 connected_servers = []
-user_data = {}
-# user_name : [server,skew,lat,lon,time]
+user_data = {} # user_name : [server,skew,lat,lon,time]
 
 def get_port_num(server_name):
     return {
@@ -126,16 +128,34 @@ async def handle_iamat(message, writer, received_time):
 async def handle_whatsat(message, writer):
     try:
         if len(message) == 4:
+            items = int(message[3])
+            radius = int(message[2])
+            if (items > 20 or radius > 50):
+                return 1
             curr_user = user_data[message[1]]
             lat = "+{0}".format(curr_user[2]) if curr_user[2] >= 0 else "{0}".format(curr_user[2])
             lon = "+{0}".format(curr_user[3]) if curr_user[3] >= 0 else "{0}".format(curr_user[3])
             lat_lon = "{0}{1}".format(lat,lon)
-            response = "AT {0} {1} {2} {3} {4}\n".format(curr_user[0],curr_user[1], message[1], lat_lon, curr_user[4])           
+            google_params = {
+                "location" : "{0},{1}".format(curr_user[2],curr_user[3]),
+                "radius" : message[2],
+                "key" : "AIzaSyDeiY9zr5FB8cpKie7aNRfQWoMQ0Kbf3Es"
+            }
+            async with aiohttp.ClientSession() as session:
+                async with session.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?', params=google_params) as result:
+                    google_data = json.loads(await result.text())
+                    google_data["results"] = google_data["results"][:items]
+            nearby_locations = json.dumps(google_data, indent = 3)
+            
+            at_response = "AT {0} {1} {2} {3} {4}\n".format(curr_user[0],curr_user[1], message[1], lat_lon, curr_user[4]) 
+            response = "{0}{1}\n\n".format(at_response,re.sub(r'\n\n+','\n',nearby_locations))       
             writer.write(response.encode())
+            await writer.drain()
             return 0
         else:
             return 1
-    except:
+    except Exception as e:
+        print(e)
         return 1
 
 async def handle_at(message):
