@@ -148,7 +148,8 @@ async def handle_whatsat(message, writer):
             nearby_locations = json.dumps(google_data, indent = 3)
             
             at_response = "AT {0} {1} {2} {3} {4}\n".format(curr_user[0],curr_user[1], message[1], lat_lon, curr_user[4]) 
-            response = "{0}{1}\n\n".format(at_response,re.sub(r'\n\n+','\n',nearby_locations))       
+            response = "{0}{1}\n\n".format(at_response,re.sub(r'\n\n+','\n',nearby_locations))    
+
             writer.write(response.encode())
             await writer.drain()
             return 0
@@ -160,7 +161,9 @@ async def handle_whatsat(message, writer):
 
 async def handle_at(message):
     lat, lon = handle_latlon(message[4])
-    user_data[message[3]] = [message[1],message[2], lat, lon, message[5]]
+    #if unknown user or time + skew (absolute time) of message is greater than time + skew of recorded data
+    if(message[3] not in user_data or (message[3] in user_data and (float(message[5]) + float(message[2])) > (float(user_data[message[3]][1]) + float(user_data[message[3]][4])))):
+        user_data[message[3]] = [message[1],message[2], lat, lon, message[5]]
 
 
 async def server_routine(reader, writer):
