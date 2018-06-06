@@ -1,4 +1,5 @@
 import asyncio
+import random
 
 """
 async def tcp_echo_client(loop):
@@ -20,6 +21,7 @@ loop.run_until_complete(tcp_echo_client(loop))
 loop.close()
 """
 
+"""
 import asyncio
 
 async def slow_operation(future):
@@ -38,3 +40,26 @@ try:
     loop.run_forever()
 finally:
     loop.close()
+
+"""
+
+
+async def out_me_daddy(i):
+    await asyncio.sleep(random.randint(0,5))
+    print(i)
+
+async def outer():
+    tasks = []
+    for i in range(10):
+        tasks.append(asyncio.ensure_future(out_me_daddy(i), loop=loop))
+
+    await asyncio.gather(*tasks)
+
+
+
+loop = asyncio.get_event_loop()
+loop.run_until_complete(outer())
+loop.close()
+
+
+
