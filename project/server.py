@@ -191,9 +191,13 @@ class server_class:
         logging.info("New Connection: {0}".format(peer))
         while True:
             try:
-                received = await reader.readuntil(b'\n')
+                received = await reader.readline()
                 received_time = time.time()         
                 received_decoded = received.decode().strip("\n").strip("\r")
+                if(len(received_decoded) == 0):
+                    writer.write("\0".encode())
+                    await writer.drain()
+                    continue
                 received_decomp = received_decoded.split()
                 logging.info('Received From {0}: \"{1}\"'.format(peer, received_decoded))
                 error = 0
@@ -219,7 +223,7 @@ class server_class:
                     await writer.drain()
             except:
                 logging.info("Lost Connection: {0}".format(peer))
-                break
+                return
 
 def main():
     server = server_class(sys.argv[1])
