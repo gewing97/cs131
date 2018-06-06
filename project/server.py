@@ -5,6 +5,7 @@ import aiohttp
 import json
 import sys
 import re
+import logging
 
 def get_port_num(server_name):
     return {
@@ -54,17 +55,16 @@ def handle_latlon(lat_lon_str):
     return lat, lon
 
 class server_class:
-    def __init__(self):
+    def __init__(self, server_name):
+        self.name = server_name
         self.loop = asyncio.get_event_loop()
         self.connected_servers = []
         self.user_data = {} # user_name : [server,skew,lat,lon,time]
-        self.log_file = ("{0}.log".format(sys.argv[1]), "w")
-
-    def start_server(self):
-        server_port = get_port_num(sys.argv[1])
+        logging.basicConfig(filename='{0}.log'.format(self.name), level=logging.INFO, format='%(levelname)s - %(asctime)s  - %(message)s')
+        logging.info("Started {0}".format(self.name))
+        server_port = get_port_num(self.name)
         routine = asyncio.start_server(self.server_routine, '127.0.0.1', server_port, loop=self.loop)
         self.server = self.loop.run_until_complete(routine)
-
         try:
             self.loop.run_forever()
         except KeyboardInterrupt:
@@ -77,12 +77,12 @@ class server_class:
 
     async def propagate_message(self, message):
         composition = message.split(" ")
-        message_to_friends = "{0} {1}\n".format(message, sys.argv[1])
+        message_to_friends = "{0} {1}\n".format(message, self.name)
         if len(composition) > 6:
             up_stream = composition[6:]
         else:
             up_stream = []
-        for friend in talks_with(sys.argv[1]):
+        for friend in talks_with(self.name):
             friend_port = get_port_num(friend)
             if friend not in up_stream:
                 persistent_connection = False
@@ -91,54 +91,57 @@ class server_class:
                         try:
                             connected[2].write(message_to_friends.encode())
                             await connected[2].drain()
+                            logging.info("Recipient: {0} Output: \"{1}\"".format(friend, message_to_friends))
                             persistent_connection = True                        
-                        except Exception as e:
-                            print(e)
+                        except:
                             self.connected_servers.remove(connected)
+                            logging.info("Server {0} Down".format(friend))
                             persistent_connection = False
                 if not persistent_connection:
                     try:
                         self.connected_servers.append(await self.connection_routine(friend_port, message_to_friends))
+                        logging.info("Server {0} Up".format(friend))
+                        logging.info("Recipient: {0} Output: \"{1}\"".format(friend, message_to_friends))                        
                     except:
                         pass
 
     async def maintain_connections(self, up_stream_friends):
-        ports = []
+        ports = {}
         for i in up_stream_friends:
-            ports.append(get_port_num(i))
+            ports[get_port_num(i)] = i
         for connected in self.connected_servers:
             if connected[0] in ports:
-                ports.remove(connected[0])
+                del ports[connected[0]]
         for maintain in ports:
             try:
                 reader, writer = await asyncio.open_connection('127.0.0.1', maintain, loop=self.loop)
-                self.connected_servers.append(maintain, reader, writer)        
+                self.connected_servers.append(maintain, reader, writer)
+                logging.info("Server {0} Up".format(ports[maintain]))            
             except:
                 pass
 
     async def connection_routine(self, server_port, message):
         reader, writer = await asyncio.open_connection('127.0.0.1', server_port, loop=self.loop)   
         writer.write(message.encode())
-        await writer.drain()        
+        await writer.drain()
         return server_port, reader, writer
 
     async def handle_iamat(self, message, writer, received_time):
         try:
             if len(message) == 4:
                 lat, lon = handle_latlon(message[2])
-                print(lat)
-                print(lon)
                 skew = received_time - float(message[3])
                 skew_str = "+{0}".format(skew) if skew >= 0 else "{0}".format(skew)
-                response = "AT {0} {1} {2}".format(sys.argv[1],skew_str, " ".join(message[1:]))   
-                self.user_data[message[1]] = [sys.argv[1], skew_str, lat, lon, message[3]]
+                response = "AT {0} {1} {2}".format(self.name,skew_str, " ".join(message[1:]))   
+                self.user_data[message[1]] = [self.name, skew_str, lat, lon, message[3]]
                 writer.write("{0}\n".format(response).encode())
+                logging.info("To Client {0}: \"{1}\"".format(writer.get_extra_info("peername"),response))
+                await writer.drain()
                 await self.propagate_message(response)
                 return 0
             else:          
                 return 1
-        except Exception as e:
-            print(e)        
+        except:      
             return 1
 
     async def handle_whatsat(self, message, writer):
@@ -159,35 +162,39 @@ class server_class:
                 }
                 async with aiohttp.ClientSession() as session:
                     async with session.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?', params=google_params) as result:
-                        google_data = json.loads(await result.text())
+                        #google_data = json.loads(await result.text())
+                        google_data = await result.json()
+                        logging.info("From Google : {0}".format(google_data))
                         google_data["results"] = google_data["results"][:items]
                 nearby_locations = json.dumps(google_data, indent = 3)
                 
                 at_response = "AT {0} {1} {2} {3} {4}\n".format(curr_user[0],curr_user[1], message[1], lat_lon, curr_user[4]) 
                 response = "{0}{1}\n\n".format(at_response,re.sub(r'\n\n+','\n',nearby_locations))    
                 writer.write(response.encode())
+                logging.info("To Client {0}: \"{1}\"".format(writer.get_extra_info("peername"),response))                
                 await writer.drain()
                 return 0
             else:
                 return 1
-        except Exception as e:
-            print(e)
+        except:
             return 1
 
     async def handle_at(self, message):
         lat, lon = handle_latlon(message[4])
         #if unknown user or time + skew (absolute time) of message is greater than time + skew of recorded data
-        if(message[3] not in self.user_data or (message[3] in self.user_data and (float(message[5]) + float(message[2])) > (float(self.user_data[message[3]][1]) + float(self.user_data[message[3]][4])))):
+        if(message[3] not in self.user_data or \
+            (message[3] in self.user_data and (float(message[5]) + float(message[2])) > (float(self.user_data[message[3]][1]) + float(self.user_data[message[3]][4])))):
             self.user_data[message[3]] = [message[1],message[2], lat, lon, message[5]]
 
     async def server_routine(self, reader, writer):
+        logging.info("New Connection: {0}".format(writer.get_extra_info("peername")))
         while True:
             try:
                 received = await reader.readuntil(b'\n')
-                received_time = time.time()            
+                received_time = time.time()         
                 received_decoded = received.decode().strip("\n").strip("\r")
                 received_decomp = received_decoded.split()
-                print('Received: %r' % received_decoded)
+                logging.info('Received From {0}: \"{1}\"'.format(writer.get_extra_info("peername"), received_decoded))
                 error = 0
                 if (len(received_decomp) > 0):
                     if (received_decomp[0] == "IAMAT"):
@@ -205,13 +212,15 @@ class server_class:
                 else:
                     error = 1
                 if error:
-                    writer.write("? {0}".format(received.decode()).encode())
+                    error_response = "? {0}".format(received.decode())
+                    writer.write(error_response.encode())
+                    logging.info("To Client {0}: \"{1}\"".format(writer.get_extra_info("peername"),error_response))
+                    await writer.drain()
             except:
                 break
 
 def main():
-    server = server_class()
-    server.start_server()
+    server = server_class(sys.argv[1])
     server.stop_server()
 
 
