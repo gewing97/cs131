@@ -31,3 +31,8 @@ INFO - 2018-06-05 18:14:06,392  - Recipient: Goloman Output: "AT Welsh -91776288
 "
 INFO - 2018-06-05 18:14:48,735  - Lost Connection: ('127.0.0.1', 61723)
 INFO - 2018-06-05 18:14:48,735  - Lost Connection: ('127.0.0.1', 61722)
+INFO - 2018-06-05 21:42:10,478 - Started Hands
+INFO - 2018-06-05 21:48:44,298 - Started Hands
+INFO - 2018-06-05 21:58:13,925 - Started Hands
+INFO - 2018-06-05 21:58:24,641 - New Connection: ('127.0.0.1', 54535)
+INFO - 2018-06-05 21:58:24,641 - Received From ('127.0.0.1', 54535): "AT Goloman -91762830.27812362 Graham -34.068930+118.445127 1620023934.918963997 Goloman"

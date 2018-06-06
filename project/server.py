@@ -78,47 +78,58 @@ class server_class:
     async def propagate_message(self, message):
         composition = message.split(" ")
         message_to_friends = "{0} {1}\n".format(message, self.name)
+        propagation_tasks = []
         if len(composition) > 6:
             up_stream = composition[6:]
+            propagation_tasks.append(asyncio.ensure_future(self.maintain_connections(up_stream)))
         else:
             up_stream = []
         for friend in talks_with(self.name):
             friend_port = get_port_num(friend)
             if friend not in up_stream:
-                persistent_connection = False
-                for connected in self.connected_servers:
-                    if friend_port == connected[0]:
-                        try:
-                            connected[2].write(message_to_friends.encode())
-                            await connected[2].drain()
-                            logging.info("Recipient: %s Output: %r" % (friend, message_to_friends))
-                            persistent_connection = True                        
-                        except:
-                            self.connected_servers.remove(connected)
-                            logging.info("Lost Connection To {0}".format(friend))
-                            persistent_connection = False
-                if not persistent_connection:
-                    try:
-                        self.connected_servers.append(await self.connection_routine(friend_port, message_to_friends))
-                        logging.info("Connected To {0}".format(friend))
-                        logging.info("Recipient: %s Output: %r" % (friend, message_to_friends))                        
-                    except:
-                        pass
+                propagation_tasks.append(asyncio.ensure_future(self.cant_stop_the_signal(friend, friend_port, message_to_friends)))
+        await asyncio.gather(*propagation_tasks)
+
+    async def cant_stop_the_signal(self, friend, friend_port, message_to_friends):
+        persistent_connection = False
+        for connected in self.connected_servers:
+            if friend_port == connected[0]:
+                try:
+                    connected[2].write(message_to_friends.encode())
+                    await connected[2].drain()
+                    logging.info("Recipient: %s Output: %r" % (friend, message_to_friends))
+                    persistent_connection = True                        
+                except:
+                    self.connected_servers.remove(connected)
+                    logging.info("Lost Connection To {0}".format(friend))
+                    persistent_connection = False
+        if not persistent_connection:
+            try:
+                self.connected_servers.append(await self.connection_routine(friend_port, message_to_friends))
+                logging.info("Connected To {0}".format(friend))
+                logging.info("Recipient: %s Output: %r" % (friend, message_to_friends))                        
+            except:
+                pass
+
+    async def attempt_connection(self, ports, port_num):
+        try:
+            reader, writer = await asyncio.open_connection('127.0.0.1', port_num, loop=self.loop)
+            self.connected_servers.append(port_num, reader, writer)
+            logging.info("Connected To {0}".format(ports[port_num]))            
+        except:
+            pass
 
     async def maintain_connections(self, up_stream_friends):
         ports = {}
+        attempt_connections = []        
         for i in up_stream_friends:
             ports[get_port_num(i)] = i
         for connected in self.connected_servers:
             if connected[0] in ports:
                 del ports[connected[0]]
         for maintain in ports:
-            try:
-                reader, writer = await asyncio.open_connection('127.0.0.1', maintain, loop=self.loop)
-                self.connected_servers.append(maintain, reader, writer)
-                logging.info("Connected To {0}".format(ports[maintain]))            
-            except:
-                pass
+            attempt_connections.append(asyncio.ensure_future(self.attempt_connection(ports, maintain), loop=self.loop))
+        await asyncio.gather(*attempt_connections)
 
     async def connection_routine(self, server_port, message):
         reader, writer = await asyncio.open_connection('127.0.0.1', server_port, loop=self.loop)   
@@ -136,8 +147,8 @@ class server_class:
                 self.user_data[message[1]] = [self.name, skew_str, lat, lon, message[3]]
                 writer.write("{0}\n".format(response).encode())
                 logging.info("To Client %s: %r" % (writer.get_extra_info("peername"),response))
-                await writer.drain()
-                await self.propagate_message(response)
+                tasks = [asyncio.ensure_future(writer.drain()), asyncio.ensure_future(self.propagate_message(response))]
+                await asyncio.gather(*tasks)
                 return 0
             else:          
                 return 1
