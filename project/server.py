@@ -60,7 +60,7 @@ class server_class:
         self.loop = asyncio.get_event_loop()
         self.connected_servers = []
         self.user_data = {} # user_name : [server,skew,lat,lon,time]
-        logging.basicConfig(filename='{0}.log'.format(self.name), level=logging.INFO, format='%(levelname)s - %(asctime)s  - %(message)s')
+        logging.basicConfig(filename='{0}.log'.format(self.name), level=logging.INFO, format='%(levelname)s - %(asctime)s - %(message)s')
         logging.info("Started {0}".format(self.name))
         server_port = get_port_num(self.name)
         routine = asyncio.start_server(self.server_routine, '127.0.0.1', server_port, loop=self.loop)
@@ -91,17 +91,17 @@ class server_class:
                         try:
                             connected[2].write(message_to_friends.encode())
                             await connected[2].drain()
-                            logging.info("Recipient: {0} Output: \"{1}\"".format(friend, message_to_friends))
+                            logging.info("Recipient: %s Output: %r" % (friend, message_to_friends))
                             persistent_connection = True                        
                         except:
                             self.connected_servers.remove(connected)
-                            logging.info("Server {0} Down".format(friend))
+                            logging.info("Lost Connection To {0}".format(friend))
                             persistent_connection = False
                 if not persistent_connection:
                     try:
                         self.connected_servers.append(await self.connection_routine(friend_port, message_to_friends))
-                        logging.info("Server {0} Up".format(friend))
-                        logging.info("Recipient: {0} Output: \"{1}\"".format(friend, message_to_friends))                        
+                        logging.info("Connected To {0}".format(friend))
+                        logging.info("Recipient: %s Output: %r" % (friend, message_to_friends))                        
                     except:
                         pass
 
@@ -116,7 +116,7 @@ class server_class:
             try:
                 reader, writer = await asyncio.open_connection('127.0.0.1', maintain, loop=self.loop)
                 self.connected_servers.append(maintain, reader, writer)
-                logging.info("Server {0} Up".format(ports[maintain]))            
+                logging.info("Connected To {0}".format(ports[maintain]))            
             except:
                 pass
 
@@ -135,7 +135,7 @@ class server_class:
                 response = "AT {0} {1} {2}".format(self.name,skew_str, " ".join(message[1:]))   
                 self.user_data[message[1]] = [self.name, skew_str, lat, lon, message[3]]
                 writer.write("{0}\n".format(response).encode())
-                logging.info("To Client {0}: \"{1}\"".format(writer.get_extra_info("peername"),response))
+                logging.info("To Client %s: %r" % (writer.get_extra_info("peername"),response))
                 await writer.drain()
                 await self.propagate_message(response)
                 return 0
@@ -164,14 +164,14 @@ class server_class:
                     async with session.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?', params=google_params) as result:
                         #google_data = json.loads(await result.text())
                         google_data = await result.json()
-                        logging.info("From Google : {0}".format(google_data))
+                        logging.info("From Google: {0}".format(google_data))
                         google_data["results"] = google_data["results"][:items]
                 nearby_locations = json.dumps(google_data, indent = 3)
                 
                 at_response = "AT {0} {1} {2} {3} {4}\n".format(curr_user[0],curr_user[1], message[1], lat_lon, curr_user[4]) 
                 response = "{0}{1}\n\n".format(at_response,re.sub(r'\n\n+','\n',nearby_locations))    
                 writer.write(response.encode())
-                logging.info("To Client {0}: \"{1}\"".format(writer.get_extra_info("peername"),response))                
+                logging.info("To Client %s: %r" % (writer.get_extra_info("peername"),response))             
                 await writer.drain()
                 return 0
             else:
@@ -187,14 +187,15 @@ class server_class:
             self.user_data[message[3]] = [message[1],message[2], lat, lon, message[5]]
 
     async def server_routine(self, reader, writer):
-        logging.info("New Connection: {0}".format(writer.get_extra_info("peername")))
+        peer = writer.get_extra_info("peername")
+        logging.info("New Connection: {0}".format(peer))
         while True:
             try:
                 received = await reader.readuntil(b'\n')
                 received_time = time.time()         
                 received_decoded = received.decode().strip("\n").strip("\r")
                 received_decomp = received_decoded.split()
-                logging.info('Received From {0}: \"{1}\"'.format(writer.get_extra_info("peername"), received_decoded))
+                logging.info('Received From {0}: \"{1}\"'.format(peer, received_decoded))
                 error = 0
                 if (len(received_decomp) > 0):
                     if (received_decomp[0] == "IAMAT"):
@@ -214,9 +215,10 @@ class server_class:
                 if error:
                     error_response = "? {0}".format(received.decode())
                     writer.write(error_response.encode())
-                    logging.info("To Client {0}: \"{1}\"".format(writer.get_extra_info("peername"),error_response))
+                    logging.info("To Client %s: %r" % (peer,error_response))
                     await writer.drain()
             except:
+                logging.info("Lost Connection: {0}".format(peer))
                 break
 
 def main():

@@ -1,167 +1,46 @@
-INFO - 2018-06-05 17:44:44,231  - New Connection: ('127.0.0.1', 60325)
-INFO - 2018-06-05 17:45:04,592  - Received From ('127.0.0.1', 60325): "IAMAT kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997"
-INFO - 2018-06-05 17:45:04,592  - To Client ('127.0.0.1', 60325) : "AT Goloman +8221969.673483372 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997"
-INFO - 2018-06-05 17:45:04,593  - Server Hands Up
-INFO - 2018-06-05 17:45:04,593  - Recipient: Hands Output: AT Goloman +8221969.673483372 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman
-
-INFO - 2018-06-05 17:45:19,458  - Received From ('127.0.0.1', 60325): "WHATSAT kiwi.cs.ucla.edu 10 5"
-INFO - 2018-06-05 17:45:19,866  - From Google : {'html_attributions': [], 'results': [{'geometry': {'location': {'lat': 34.068864, 'lng': -118.4450156}, 'viewport': {'northeast': {'lat': 34.07021298029149, 'lng': -118.4436666197085}, 'southwest': {'lat': 34.0675150197085, 'lng': -118.4463645802915}}}, 'icon': 'https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png', 'id': 'ef162ea4f60a0b3933fae75544dba377b996befa', 'name': 'Westwood Plaza', 'place_id': 'ChIJ6Re7qYi8woAR22jVhVAye2M', 'reference': 'CmRbAAAAWe7fwlykiztrd92KM99TAeiLzdtAogPOMlm1ZjlLdsdVcEENBpx969QOQG_zJiGXqX6X_iblmSPdhkoQWbKqW9RlKPgPoBBL8u-pvMdq9jS8sZ6c0LNQRf1TtbZ_BLCuEhCRpaH7bQqPu9WC_4MI4qagGhQuVwOyyQI3uIgQdvwXM75xmIgieg', 'scope': 'GOOGLE', 'types': ['route'], 'vicinity': 'Los Angeles'}, {'geometry': {'location': {'lat': 34.068921, 'lng': -118.4451811}, 'viewport': {'northeast': {'lat': 34.08632165, 'lng': -118.4298687}, 'southwest': {'lat': 34.05637465, 'lng': -118.4632287}}}, 'icon': 'https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png', 'id': '4d56f16ad3d8976d49143fa4fdfffbc0a7ce8e39', 'name': 'University of California, Los Angeles', 'photos': [{'height': 3024, 'html_attributions': ['<a href="https://maps.google.com/maps/contrib/117926064907260379503/photos">Matt Peyton</a>'], 'photo_reference': 'CmRZAAAA6Cnh_mMVI_Ywiz6eZhKdGfexZe8Zo4AmmF8rWDfL0qr03GsxMuqYN06vib_aL-knZ-4ndOsXR4YemRWAsjRhmW2XuKqGRyeXz_ss8VJIIYZ27pnHyESWlORRkY8d_fltEhAxl34a8fFk4IEttWSHxW0bGhT6d9t0OX4o4uqoeHMgL6fEuBx8iQ', 'width': 4032}], 'place_id': 'ChIJZQ9c8IW8woARN0gTXFiTqSU', 'rating': 4.5, 'reference': 'CmRRAAAAIrzJmf5Rygeow_kfoc7JwttPorVDK1nu__yOmsOYx1V0H8S-dG-6-7d6ti8kOpjg-1RB3nCu6g-Cc00MbJiWo9Z-Q4-21GAnV7r6S6onLANYGc2F9po_C3D7Pptqq1rkEhDSVEKEW5S9F7t2ub385ef3GhRWZrM6rKYNWmgeVd-u-ok2ZxS2XA', 'scope': 'GOOGLE', 'types': ['university', 'point_of_interest', 'establishment'], 'vicinity': 'Los Angeles'}, {'geometry': {'location': {'lat': 34.068921, 'lng': -118.4451811}, 'viewport': {'northeast': {'lat': 34.0702699802915, 'lng': -118.4438321197085}, 'southwest': {'lat': 34.0675720197085, 'lng': -118.4465300802915}}}, 'icon': 'https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png', 'id': '05fd8bf85bbaa070a3a5456fe79271816aee00ca', 'name': "UCLA Alzheimer's and Dementia Care Program", 'opening_hours': {'open_now': False, 'weekday_text': []}, 'place_id': 'ChIJV9EqEDS7woAR-jAR0xH0lSQ', 'reference': 'CmRRAAAARPvl_zdIxlxbQkFgv_1JxC2oMtmYL-ZQFxQbFpLD6toXRtTmnoAYPjxmivjsDWtmLrpJrKk6Xc0z8oWGMScUGc4ySaCotSk8NHMGeJQiffY3oxB0asrqmxJHnenmmGKvEhDNj86N6HPJncLlWKTU15YMGhQaWwvqhf0RTW4qD3MQJvma8qCU8A', 'scope': 'GOOGLE', 'types': ['health', 'point_of_interest', 'establishment'], 'vicinity': '200 UCLA, Medical Plaza Driveway Suite #365A, Los Angeles'}, {'geometry': {'location': {'lat': 34.0522342, 'lng': -118.2436849}, 'viewport': {'northeast': {'lat': 34.3373061, 'lng': -118.1552891}, 'southwest': {'lat': 33.7036519, 'lng': -118.6681759}}}, 'icon': 'https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png', 'id': '7f7b7d8118ae8db8ed3f541159ac928c484d12ad', 'name': 'Los Angeles', 'photos': [{'height': 1280, 'html_attributions': ['<a href="https://maps.google.com/maps/contrib/109425452136283017703/photos">Jasmine Bustillos</a>'], 'photo_reference': 'CmRaAAAA1D1l_6Oqym1ISDvl8Al1qnNyGpj51z_FQ00khSxyGKlMwdU1RjdAeBnY5dUWzpkdzkaN1_yBERqE1a65SJ7JNruFiyEU9-JWME6mtcNVoj6XzggUJpJjvFonERb2g2ioEhAJuBBJldMOZQENLfKpXlavGhTA1cOuwVeETtMIIXlTN7iHTcmQTQ', 'width': 1920}], 'place_id': 'ChIJE9on3F3HwoAR9AhGJW_fL-I', 'reference': 'CmRbAAAA50tiEn-FLf5lL0yl3PIKWPPQrWNLlmCkHQv1SUHF2DvqSwSPxTjx--qlKQJmpW-CLc_8h7mCloU2AWU9LJ4YPiWRE-6EvB4oHhCqQC9-vrahWrdqd8X5fzqEEfptscWGEhDFkmEMinZ4PdNzlg8HqaS4GhTcXMoRRpo2HFV1XgMcz6gpX0IDIQ', 'scope': 'GOOGLE', 'types': ['locality', 'political'], 'vicinity': 'Los Angeles'}], 'status': 'OK'}
-INFO - 2018-06-05 17:45:19,868  - To Client ('127.0.0.1', 60325) : "AT Goloman +8221969.673483372 kiwi.cs.ucla.edu +34.06893-118.445127 1520023934.918963997
-{
-   "html_attributions": [],
-   "results": [
-      {
-         "geometry": {
-            "location": {
-               "lat": 34.068864,
-               "lng": -118.4450156
-            },
-            "viewport": {
-               "northeast": {
-                  "lat": 34.07021298029149,
-                  "lng": -118.4436666197085
-               },
-               "southwest": {
-                  "lat": 34.0675150197085,
-                  "lng": -118.4463645802915
-               }
-            }
-         },
-         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
-         "id": "ef162ea4f60a0b3933fae75544dba377b996befa",
-         "name": "Westwood Plaza",
-         "place_id": "ChIJ6Re7qYi8woAR22jVhVAye2M",
-         "reference": "CmRbAAAAWe7fwlykiztrd92KM99TAeiLzdtAogPOMlm1ZjlLdsdVcEENBpx969QOQG_zJiGXqX6X_iblmSPdhkoQWbKqW9RlKPgPoBBL8u-pvMdq9jS8sZ6c0LNQRf1TtbZ_BLCuEhCRpaH7bQqPu9WC_4MI4qagGhQuVwOyyQI3uIgQdvwXM75xmIgieg",
-         "scope": "GOOGLE",
-         "types": [
-            "route"
-         ],
-         "vicinity": "Los Angeles"
-      },
-      {
-         "geometry": {
-            "location": {
-               "lat": 34.068921,
-               "lng": -118.4451811
-            },
-            "viewport": {
-               "northeast": {
-                  "lat": 34.08632165,
-                  "lng": -118.4298687
-               },
-               "southwest": {
-                  "lat": 34.05637465,
-                  "lng": -118.4632287
-               }
-            }
-         },
-         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",
-         "id": "4d56f16ad3d8976d49143fa4fdfffbc0a7ce8e39",
-         "name": "University of California, Los Angeles",
-         "photos": [
-            {
-               "height": 3024,
-               "html_attributions": [
-                  "<a href=\"https://maps.google.com/maps/contrib/117926064907260379503/photos\">Matt Peyton</a>"
-               ],
-               "photo_reference": "CmRZAAAA6Cnh_mMVI_Ywiz6eZhKdGfexZe8Zo4AmmF8rWDfL0qr03GsxMuqYN06vib_aL-knZ-4ndOsXR4YemRWAsjRhmW2XuKqGRyeXz_ss8VJIIYZ27pnHyESWlORRkY8d_fltEhAxl34a8fFk4IEttWSHxW0bGhT6d9t0OX4o4uqoeHMgL6fEuBx8iQ",
-               "width": 4032
-            }
-         ],
-         "place_id": "ChIJZQ9c8IW8woARN0gTXFiTqSU",
-         "rating": 4.5,
-         "reference": "CmRRAAAAIrzJmf5Rygeow_kfoc7JwttPorVDK1nu__yOmsOYx1V0H8S-dG-6-7d6ti8kOpjg-1RB3nCu6g-Cc00MbJiWo9Z-Q4-21GAnV7r6S6onLANYGc2F9po_C3D7Pptqq1rkEhDSVEKEW5S9F7t2ub385ef3GhRWZrM6rKYNWmgeVd-u-ok2ZxS2XA",
-         "scope": "GOOGLE",
-         "types": [
-            "university",
-            "point_of_interest",
-            "establishment"
-         ],
-         "vicinity": "Los Angeles"
-      },
-      {
-         "geometry": {
-            "location": {
-               "lat": 34.068921,
-               "lng": -118.4451811
-            },
-            "viewport": {
-               "northeast": {
-                  "lat": 34.0702699802915,
-                  "lng": -118.4438321197085
-               },
-               "southwest": {
-                  "lat": 34.0675720197085,
-                  "lng": -118.4465300802915
-               }
-            }
-         },
-         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
-         "id": "05fd8bf85bbaa070a3a5456fe79271816aee00ca",
-         "name": "UCLA Alzheimer's and Dementia Care Program",
-         "opening_hours": {
-            "open_now": false,
-            "weekday_text": []
-         },
-         "place_id": "ChIJV9EqEDS7woAR-jAR0xH0lSQ",
-         "reference": "CmRRAAAARPvl_zdIxlxbQkFgv_1JxC2oMtmYL-ZQFxQbFpLD6toXRtTmnoAYPjxmivjsDWtmLrpJrKk6Xc0z8oWGMScUGc4ySaCotSk8NHMGeJQiffY3oxB0asrqmxJHnenmmGKvEhDNj86N6HPJncLlWKTU15YMGhQaWwvqhf0RTW4qD3MQJvma8qCU8A",
-         "scope": "GOOGLE",
-         "types": [
-            "health",
-            "point_of_interest",
-            "establishment"
-         ],
-         "vicinity": "200 UCLA, Medical Plaza Driveway Suite #365A, Los Angeles"
-      },
-      {
-         "geometry": {
-            "location": {
-               "lat": 34.0522342,
-               "lng": -118.2436849
-            },
-            "viewport": {
-               "northeast": {
-                  "lat": 34.3373061,
-                  "lng": -118.1552891
-               },
-               "southwest": {
-                  "lat": 33.7036519,
-                  "lng": -118.6681759
-               }
-            }
-         },
-         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
-         "id": "7f7b7d8118ae8db8ed3f541159ac928c484d12ad",
-         "name": "Los Angeles",
-         "photos": [
-            {
-               "height": 1280,
-               "html_attributions": [
-                  "<a href=\"https://maps.google.com/maps/contrib/109425452136283017703/photos\">Jasmine Bustillos</a>"
-               ],
-               "photo_reference": "CmRaAAAA1D1l_6Oqym1ISDvl8Al1qnNyGpj51z_FQ00khSxyGKlMwdU1RjdAeBnY5dUWzpkdzkaN1_yBERqE1a65SJ7JNruFiyEU9-JWME6mtcNVoj6XzggUJpJjvFonERb2g2ioEhAJuBBJldMOZQENLfKpXlavGhTA1cOuwVeETtMIIXlTN7iHTcmQTQ",
-               "width": 1920
-            }
-         ],
-         "place_id": "ChIJE9on3F3HwoAR9AhGJW_fL-I",
-         "reference": "CmRbAAAA50tiEn-FLf5lL0yl3PIKWPPQrWNLlmCkHQv1SUHF2DvqSwSPxTjx--qlKQJmpW-CLc_8h7mCloU2AWU9LJ4YPiWRE-6EvB4oHhCqQC9-vrahWrdqd8X5fzqEEfptscWGEhDFkmEMinZ4PdNzlg8HqaS4GhTcXMoRRpo2HFV1XgMcz6gpX0IDIQ",
-         "scope": "GOOGLE",
-         "types": [
-            "locality",
-            "political"
-         ],
-         "vicinity": "Los Angeles"
-      }
-   ],
-   "status": "OK"
-}
-
+INFO - 2018-06-05 18:11:30,852  - Started Goloman
+INFO - 2018-06-05 18:12:06,970  - New Connection: ('127.0.0.1', 61703)
+INFO - 2018-06-05 18:12:11,566  - Received From ('127.0.0.1', 61703): "hello"
+INFO - 2018-06-05 18:12:11,566  - To Client ('127.0.0.1', 61703): "? hello
 "
-INFO - 2018-06-05 17:45:32,732  - Received From ('127.0.0.1', 60325): "IAMAT kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997"
-INFO - 2018-06-05 17:45:32,733  - To Client ('127.0.0.1', 60325) : "AT Goloman +8221997.813092709 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997"
-INFO - 2018-06-05 17:45:32,733  - Server Hands Down
-INFO - 2018-06-05 17:45:50,691  - Received From ('127.0.0.1', 60325): "IAMAT kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997"
-INFO - 2018-06-05 17:45:50,691  - To Client ('127.0.0.1', 60325) : "AT Goloman +8222015.7721197605 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997"
-INFO - 2018-06-05 17:45:50,692  - Server Hands Up
-INFO - 2018-06-05 17:45:50,693  - Recipient: Hands Output: AT Goloman +8222015.7721197605 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman
-
+INFO - 2018-06-05 18:12:26,380  - Received From ('127.0.0.1', 61703): "IAMAT kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997"
+INFO - 2018-06-05 18:12:26,380  - To Client ('127.0.0.1', 61703): "AT Goloman +8223611.461388111 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997"
+INFO - 2018-06-05 18:12:26,381  - Server Hands Up
+INFO - 2018-06-05 18:12:26,381  - Recipient: Hands Output: "AT Goloman +8223611.461388111 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman
+"
+INFO - 2018-06-05 18:12:26,382  - Server Holiday Up
+INFO - 2018-06-05 18:12:26,382  - Recipient: Holiday Output: "AT Goloman +8223611.461388111 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman
+"
+INFO - 2018-06-05 18:12:26,382  - Server Wilkes Up
+INFO - 2018-06-05 18:12:26,382  - Recipient: Wilkes Output: "AT Goloman +8223611.461388111 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman
+"
+INFO - 2018-06-05 18:12:32,548  - Received From ('127.0.0.1', 61703): "WHATSAT kiwi.cs.ucla.edu 10 5"
+INFO - 2018-06-05 18:12:32,961  - From Google : {'html_attributions': [], 'results': [{'geometry': {'location': {'lat': 34.068864, 'lng': -118.4450156}, 'viewport': {'northeast': {'lat': 34.07021298029149, 'lng': -118.4436666197085}, 'southwest': {'lat': 34.0675150197085, 'lng': -118.4463645802915}}}, 'icon': 'https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png', 'id': 'ef162ea4f60a0b3933fae75544dba377b996befa', 'name': 'Westwood Plaza', 'place_id': 'ChIJ6Re7qYi8woAR22jVhVAye2M', 'reference': 'CmRbAAAAE7KU7ErueTrtLBoOY5bKnmLl7N5BqfoL1jNCQUda7QrMYFf97OHUmmI2ILkcfvn23fQRK_y7vkymPgPmkjOogEHmfT_UNHoNoV0k7k_9GOzZybRcLGCqLHiGS1k4nkHOEhC0C_BL4U3RvAFcXVFQR_PZGhQvYak21gnMDzPqIW2qbj6E31kEQA', 'scope': 'GOOGLE', 'types': ['route'], 'vicinity': 'Los Angeles'}, {'geometry': {'location': {'lat': 34.068921, 'lng': -118.4451811}, 'viewport': {'northeast': {'lat': 34.08632165, 'lng': -118.4298687}, 'southwest': {'lat': 34.05637465, 'lng': -118.4632287}}}, 'icon': 'https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png', 'id': '4d56f16ad3d8976d49143fa4fdfffbc0a7ce8e39', 'name': 'University of California, Los Angeles', 'photos': [{'height': 3024, 'html_attributions': ['<a href="https://maps.google.com/maps/contrib/117926064907260379503/photos">Matt Peyton</a>'], 'photo_reference': 'CmRZAAAA9H4tbYLWjZz53LjlVdetKzM7EDgIwpWAoWloL630IODefNHQ27DEZM8130gIhJNnZlPJX3R0KANpDmVHcaugkg-2CL-YWlLe29610P9SUFLJWzH7UYg-8ahnl9c7G5MSEhBYs4LwJ3f7c3HiOko7dI0SGhRBdqzIspGA2zBWLQPb34DhALNMsg', 'width': 4032}], 'place_id': 'ChIJZQ9c8IW8woARN0gTXFiTqSU', 'rating': 4.5, 'reference': 'CmRRAAAAnf90x91LtBtzOeHKZp8MbdJTxWQ1J5kvH5RKO3QDX-A4WgtDRBQ2nzcor9ZwuTOgqXMWwgtU0c2StbMLubbn2OaEqbdIoJDIYvxXANJhzuWE5SEP78B-ZLPEdISv76GPEhDWkI3BgO0KGPVNe2XsIlNGGhRr3w3uh5vHi7_m30ZpMoIvb9Urag', 'scope': 'GOOGLE', 'types': ['university', 'point_of_interest', 'establishment'], 'vicinity': 'Los Angeles'}, {'geometry': {'location': {'lat': 34.068921, 'lng': -118.4451811}, 'viewport': {'northeast': {'lat': 34.0702699802915, 'lng': -118.4438321197085}, 'southwest': {'lat': 34.0675720197085, 'lng': -118.4465300802915}}}, 'icon': 'https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png', 'id': '05fd8bf85bbaa070a3a5456fe79271816aee00ca', 'name': "UCLA Alzheimer's and Dementia Care Program", 'opening_hours': {'open_now': False, 'weekday_text': []}, 'place_id': 'ChIJV9EqEDS7woAR-jAR0xH0lSQ', 'reference': 'CmRRAAAAtFJY--F0uNl6Uma9AJasX2-cEPF6Umwnf1_Xy03gl2b5MV-fal5CUonRkauDgOenuMEL382nIDc5lHT1gz0SfBVDbwLgx3rpLI2uCSUWoDTjtGsQ7RlllIRF9lDz70FaEhDmNHWFnBX4Ttp51ZiI24KiGhTwebOinl-_HBPis9a4HsF1tNXJeQ', 'scope': 'GOOGLE', 'types': ['health', 'point_of_interest', 'establishment'], 'vicinity': '200 UCLA, Medical Plaza Driveway Suite #365A, Los Angeles'}, {'geometry': {'location': {'lat': 34.0522342, 'lng': -118.2436849}, 'viewport': {'northeast': {'lat': 34.3373061, 'lng': -118.1552891}, 'southwest': {'lat': 33.7036519, 'lng': -118.6681759}}}, 'icon': 'https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png', 'id': '7f7b7d8118ae8db8ed3f541159ac928c484d12ad', 'name': 'Los Angeles', 'photos': [{'height': 1280, 'html_attributions': ['<a href="https://maps.google.com/maps/contrib/109425452136283017703/photos">Jasmine Bustillos</a>'], 'photo_reference': 'CmRaAAAA3KKTWFZ-S97HaC9A2kqna_8SgByBAXtIW3zlc2NBcQkEF1Ig3kGnj81zfwfucxU9GxhFlTZSc-hMMkg-eeSxE41R6Y6obqxuSfTSnJVIdcupK1q6lxBGE6h4Ntqb2d0TEhD90G58_QyryRNG5VZT-i93GhS-vbeUM_WNHfOW2kixNkH5zIjAmw', 'width': 1920}], 'place_id': 'ChIJE9on3F3HwoAR9AhGJW_fL-I', 'reference': 'CmRbAAAA63cNt21vxnwuUkZVz7mpq6GJe_DCloin6DHGWNyVOONiE_Ac1T-SCQQ-LLokBeQsixBc42gq1ONCmYgBJ6K0pN2Aj5Wq5uH4scCXjzzal_CRxKBKw7-wQoR4AuZlYOifEhC1uXd_qh2WcHwnUfyJqTQIGhQ1ktvWM1fI-GCbmDYfSBCOAerPzg', 'scope': 'GOOGLE', 'types': ['locality', 'political'], 'vicinity': 'Los Angeles'}], 'status': 'OK'}
+INFO - 2018-06-05 18:12:32,962  - To Client ('127.0.0.1', 61703): 'AT Goloman +8223611.461388111 kiwi.cs.ucla.edu +34.06893-118.445127 1520023934.918963997\n{\n   "html_attributions": [],\n   "results": [\n      {\n         "geometry": {\n            "location": {\n               "lat": 34.068864,\n               "lng": -118.4450156\n            },\n            "viewport": {\n               "northeast": {\n                  "lat": 34.07021298029149,\n                  "lng": -118.4436666197085\n               },\n               "southwest": {\n                  "lat": 34.0675150197085,\n                  "lng": -118.4463645802915\n               }\n            }\n         },\n         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",\n         "id": "ef162ea4f60a0b3933fae75544dba377b996befa",\n         "name": "Westwood Plaza",\n         "place_id": "ChIJ6Re7qYi8woAR22jVhVAye2M",\n         "reference": "CmRbAAAAE7KU7ErueTrtLBoOY5bKnmLl7N5BqfoL1jNCQUda7QrMYFf97OHUmmI2ILkcfvn23fQRK_y7vkymPgPmkjOogEHmfT_UNHoNoV0k7k_9GOzZybRcLGCqLHiGS1k4nkHOEhC0C_BL4U3RvAFcXVFQR_PZGhQvYak21gnMDzPqIW2qbj6E31kEQA",\n         "scope": "GOOGLE",\n         "types": [\n            "route"\n         ],\n         "vicinity": "Los Angeles"\n      },\n      {\n         "geometry": {\n            "location": {\n               "lat": 34.068921,\n               "lng": -118.4451811\n            },\n            "viewport": {\n               "northeast": {\n                  "lat": 34.08632165,\n                  "lng": -118.4298687\n               },\n               "southwest": {\n                  "lat": 34.05637465,\n                  "lng": -118.4632287\n               }\n            }\n         },\n         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",\n         "id": "4d56f16ad3d8976d49143fa4fdfffbc0a7ce8e39",\n         "name": "University of California, Los Angeles",\n         "photos": [\n            {\n               "height": 3024,\n               "html_attributions": [\n                  "<a href=\\"https://maps.google.com/maps/contrib/117926064907260379503/photos\\">Matt Peyton</a>"\n               ],\n               "photo_reference": "CmRZAAAA9H4tbYLWjZz53LjlVdetKzM7EDgIwpWAoWloL630IODefNHQ27DEZM8130gIhJNnZlPJX3R0KANpDmVHcaugkg-2CL-YWlLe29610P9SUFLJWzH7UYg-8ahnl9c7G5MSEhBYs4LwJ3f7c3HiOko7dI0SGhRBdqzIspGA2zBWLQPb34DhALNMsg",\n               "width": 4032\n            }\n         ],\n         "place_id": "ChIJZQ9c8IW8woARN0gTXFiTqSU",\n         "rating": 4.5,\n         "reference": "CmRRAAAAnf90x91LtBtzOeHKZp8MbdJTxWQ1J5kvH5RKO3QDX-A4WgtDRBQ2nzcor9ZwuTOgqXMWwgtU0c2StbMLubbn2OaEqbdIoJDIYvxXANJhzuWE5SEP78B-ZLPEdISv76GPEhDWkI3BgO0KGPVNe2XsIlNGGhRr3w3uh5vHi7_m30ZpMoIvb9Urag",\n         "scope": "GOOGLE",\n         "types": [\n            "university",\n            "point_of_interest",\n            "establishment"\n         ],\n         "vicinity": "Los Angeles"\n      },\n      {\n         "geometry": {\n            "location": {\n               "lat": 34.068921,\n               "lng": -118.4451811\n            },\n            "viewport": {\n               "northeast": {\n                  "lat": 34.0702699802915,\n                  "lng": -118.4438321197085\n               },\n               "southwest": {\n                  "lat": 34.0675720197085,\n                  "lng": -118.4465300802915\n               }\n            }\n         },\n         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",\n         "id": "05fd8bf85bbaa070a3a5456fe79271816aee00ca",\n         "name": "UCLA Alzheimer\'s and Dementia Care Program",\n         "opening_hours": {\n            "open_now": false,\n            "weekday_text": []\n         },\n         "place_id": "ChIJV9EqEDS7woAR-jAR0xH0lSQ",\n         "reference": "CmRRAAAAtFJY--F0uNl6Uma9AJasX2-cEPF6Umwnf1_Xy03gl2b5MV-fal5CUonRkauDgOenuMEL382nIDc5lHT1gz0SfBVDbwLgx3rpLI2uCSUWoDTjtGsQ7RlllIRF9lDz70FaEhDmNHWFnBX4Ttp51ZiI24KiGhTwebOinl-_HBPis9a4HsF1tNXJeQ",\n         "scope": "GOOGLE",\n         "types": [\n            "health",\n            "point_of_interest",\n            "establishment"\n         ],\n         "vicinity": "200 UCLA, Medical Plaza Driveway Suite #365A, Los Angeles"\n      },\n      {\n         "geometry": {\n            "location": {\n               "lat": 34.0522342,\n               "lng": -118.2436849\n            },\n            "viewport": {\n               "northeast": {\n                  "lat": 34.3373061,\n                  "lng": -118.1552891\n               },\n               "southwest": {\n                  "lat": 33.7036519,\n                  "lng": -118.6681759\n               }\n            }\n         },\n         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",\n         "id": "7f7b7d8118ae8db8ed3f541159ac928c484d12ad",\n         "name": "Los Angeles",\n         "photos": [\n            {\n               "height": 1280,\n               "html_attributions": [\n                  "<a href=\\"https://maps.google.com/maps/contrib/109425452136283017703/photos\\">Jasmine Bustillos</a>"\n               ],\n               "photo_reference": "CmRaAAAA3KKTWFZ-S97HaC9A2kqna_8SgByBAXtIW3zlc2NBcQkEF1Ig3kGnj81zfwfucxU9GxhFlTZSc-hMMkg-eeSxE41R6Y6obqxuSfTSnJVIdcupK1q6lxBGE6h4Ntqb2d0TEhD90G58_QyryRNG5VZT-i93GhS-vbeUM_WNHfOW2kixNkH5zIjAmw",\n               "width": 1920\n            }\n         ],\n         "place_id": "ChIJE9on3F3HwoAR9AhGJW_fL-I",\n         "reference": "CmRbAAAA63cNt21vxnwuUkZVz7mpq6GJe_DCloin6DHGWNyVOONiE_Ac1T-SCQQ-LLokBeQsixBc42gq1ONCmYgBJ6K0pN2Aj5Wq5uH4scCXjzzal_CRxKBKw7-wQoR4AuZlYOifEhC1uXd_qh2WcHwnUfyJqTQIGhQ1ktvWM1fI-GCbmDYfSBCOAerPzg",\n         "scope": "GOOGLE",\n         "types": [\n            "locality",\n            "political"\n         ],\n         "vicinity": "Los Angeles"\n      }\n   ],\n   "status": "OK"\n}\n\n'
+INFO - 2018-06-05 18:12:40,931  - Received From ('127.0.0.1', 61703): "IAMAT kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997"
+INFO - 2018-06-05 18:12:40,932  - To Client ('127.0.0.1', 61703): "AT Goloman +8223626.012220383 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997"
+INFO - 2018-06-05 18:12:40,932  - Recipient: Hands Output: "AT Goloman +8223626.012220383 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman
+"
+INFO - 2018-06-05 18:12:40,932  - Recipient: Holiday Output: "AT Goloman +8223626.012220383 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman
+"
+INFO - 2018-06-05 18:12:40,932  - Recipient: Wilkes Output: "AT Goloman +8223626.012220383 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman
+"
+INFO - 2018-06-05 18:12:44,963  - Lost Connection: ('127.0.0.1', 61703)
+INFO - 2018-06-05 18:14:06,385  - New Connection: ('127.0.0.1', 61784)
+INFO - 2018-06-05 18:14:06,385  - Received From ('127.0.0.1', 61784): "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday"
+INFO - 2018-06-05 18:14:06,385  - Recipient: Hands Output: "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Goloman
+"
+INFO - 2018-06-05 18:14:06,386  - Recipient: Wilkes Output: "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Goloman
+"
+INFO - 2018-06-05 18:14:06,386  - New Connection: ('127.0.0.1', 61785)
+INFO - 2018-06-05 18:14:06,388  - Received From ('127.0.0.1', 61785): "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Wilkes"
+INFO - 2018-06-05 18:14:06,388  - Recipient: Hands Output: "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Wilkes Goloman
+"
+INFO - 2018-06-05 18:14:06,390  - New Connection: ('127.0.0.1', 61786)
+INFO - 2018-06-05 18:14:06,391  - New Connection: ('127.0.0.1', 61787)
+INFO - 2018-06-05 18:14:06,392  - Received From ('127.0.0.1', 61786): "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Wilkes Hands"
+INFO - 2018-06-05 18:14:06,392  - Received From ('127.0.0.1', 61787): "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Wilkes Hands"
+INFO - 2018-06-05 18:14:48,735  - Lost Connection: ('127.0.0.1', 61785)
+INFO - 2018-06-05 18:14:49,234  - Lost Connection: ('127.0.0.1', 61784)
+INFO - 2018-06-05 18:14:49,760  - Lost Connection: ('127.0.0.1', 61786)
+INFO - 2018-06-05 18:14:49,760  - Lost Connection: ('127.0.0.1', 61787)
