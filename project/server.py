@@ -68,7 +68,7 @@ class server_class:
         try:
             self.loop.run_forever()
         except KeyboardInterrupt:
-            pass # loop.gather?
+            pass
         
     def stop_server(self):
         self.server.close()
@@ -162,7 +162,6 @@ class server_class:
                 }
                 async with aiohttp.ClientSession() as session:
                     async with session.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?', params=google_params) as result:
-                        #google_data = json.loads(await result.text())
                         google_data = await result.json()
                         logging.info("From Google: {0}".format(google_data))
                         google_data["results"] = google_data["results"][:items]
