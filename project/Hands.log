@@ -1,45 +1,101 @@
-INFO - 2018-06-05 18:11:34,997  - Started Hands
-INFO - 2018-06-05 18:12:26,381  - New Connection: ('127.0.0.1', 61715)
-INFO - 2018-06-05 18:12:26,381  - Received From ('127.0.0.1', 61715): "AT Goloman +8223611.461388111 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman"
-INFO - 2018-06-05 18:12:26,382  - Server Wilkes Up
-INFO - 2018-06-05 18:12:26,382  - Recipient: Wilkes Output: "AT Goloman +8223611.461388111 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman Hands
-"
-INFO - 2018-06-05 18:12:26,385  - New Connection: ('127.0.0.1', 61722)
-INFO - 2018-06-05 18:12:26,386  - Received From ('127.0.0.1', 61722): "AT Goloman +8223611.461388111 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman Wilkes"
-INFO - 2018-06-05 18:12:26,387  - New Connection: ('127.0.0.1', 61723)
-INFO - 2018-06-05 18:12:26,387  - Received From ('127.0.0.1', 61723): "AT Goloman +8223611.461388111 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman Holiday Wilkes"
-INFO - 2018-06-05 18:12:40,932  - Received From ('127.0.0.1', 61715): "AT Goloman +8223626.012220383 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman"
-INFO - 2018-06-05 18:12:40,932  - Recipient: Wilkes Output: "AT Goloman +8223626.012220383 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman Hands
-"
-INFO - 2018-06-05 18:12:40,933  - Received From ('127.0.0.1', 61722): "AT Goloman +8223626.012220383 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman Wilkes"
-INFO - 2018-06-05 18:12:40,933  - Received From ('127.0.0.1', 61723): "AT Goloman +8223626.012220383 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman Wilkes"
-INFO - 2018-06-05 18:12:40,933  - Received From ('127.0.0.1', 61722): "AT Goloman +8223626.012220383 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman Holiday Wilkes"
-INFO - 2018-06-05 18:12:40,933  - Received From ('127.0.0.1', 61723): "AT Goloman +8223626.012220383 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman Holiday Wilkes"
-INFO - 2018-06-05 18:14:06,386  - Received From ('127.0.0.1', 61715): "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Goloman"
-INFO - 2018-06-05 18:14:06,386  - Recipient: Wilkes Output: "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Goloman Hands
-"
-INFO - 2018-06-05 18:14:06,387  - Received From ('127.0.0.1', 61722): "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Goloman Wilkes"
-INFO - 2018-06-05 18:14:06,387  - Received From ('127.0.0.1', 61723): "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Goloman Wilkes"
-INFO - 2018-06-05 18:14:06,388  - Received From ('127.0.0.1', 61722): "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Wilkes"
-INFO - 2018-06-05 18:14:06,389  - Received From ('127.0.0.1', 61723): "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Wilkes"
-INFO - 2018-06-05 18:14:06,390  - Received From ('127.0.0.1', 61715): "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Wilkes Goloman"
-INFO - 2018-06-05 18:14:06,391  - Server Goloman Up
-INFO - 2018-06-05 18:14:06,392  - Recipient: Goloman Output: "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Wilkes Hands
-"
-INFO - 2018-06-05 18:14:06,392  - Server Goloman Up
-INFO - 2018-06-05 18:14:06,392  - Recipient: Goloman Output: "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Wilkes Hands
-"
-INFO - 2018-06-05 18:14:48,735  - Lost Connection: ('127.0.0.1', 61723)
-INFO - 2018-06-05 18:14:48,735  - Lost Connection: ('127.0.0.1', 61722)
-INFO - 2018-06-05 21:42:10,478 - Started Hands
-INFO - 2018-06-05 21:48:44,298 - Started Hands
-INFO - 2018-06-05 21:58:13,925 - Started Hands
-INFO - 2018-06-05 21:58:24,641 - New Connection: ('127.0.0.1', 54535)
-INFO - 2018-06-05 21:58:24,641 - Received From ('127.0.0.1', 54535): "AT Goloman -91762830.27812362 Graham -34.068930+118.445127 1620023934.918963997 Goloman"
-INFO - 2018-06-05 22:58:46,468 - Lost Connection: ('127.0.0.1', 54535)
-INFO - 2018-06-06 20:39:54,945 - Started Hands
-INFO - 2018-06-06 20:40:16,164 - New Connection: ('127.0.0.1', 58079)
-INFO - 2018-06-06 20:40:16,165 - Received From ('127.0.0.1', 58079): "AT Goloman +8318881.244376809961059570312 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman"
-ERROR - 2018-06-06 20:41:11,871 - Task was destroyed but it is pending!
-task: <Task pending coro=<server_class.server_routine() running at server.py:210>>
-INFO - 2018-06-06 20:41:11,871 - Lost Connection: ('127.0.0.1', 58079)
+INFO - 2018-06-05 22:47:51,196 - Started Hands
+INFO - 2018-06-05 22:53:12,286 - New Connection: ('127.0.0.1', 50954)
+INFO - 2018-06-05 22:53:12,286 - Received From ('127.0.0.1', 50954): "AT Goloman -91759542.63471651 potato -34.068930+118.445127 1620023934.918963997 Goloman"
+INFO - 2018-06-05 22:53:12,287 - Connected To Wilkes
+INFO - 2018-06-05 22:53:12,287 - Recipient: Wilkes Output: 'AT Goloman -91759542.63471651 potato -34.068930+118.445127 1620023934.918963997 Goloman Hands\n'
+INFO - 2018-06-05 22:53:12,288 - New Connection: ('127.0.0.1', 50968)
+INFO - 2018-06-05 22:53:12,290 - Received From ('127.0.0.1', 50968): "AT Goloman -91759542.63471651 potato -34.068930+118.445127 1620023934.918963997 Goloman Wilkes"
+INFO - 2018-06-05 22:53:12,291 - New Connection: ('127.0.0.1', 50988)
+INFO - 2018-06-05 22:53:12,291 - Received From ('127.0.0.1', 50968): "AT Goloman -91759542.63471651 potato -34.068930+118.445127 1620023934.918963997 Goloman Holiday Wilkes"
+INFO - 2018-06-05 22:53:12,294 - New Connection: ('127.0.0.1', 51004)
+INFO - 2018-06-05 22:53:12,294 - New Connection: ('127.0.0.1', 51008)
+INFO - 2018-06-05 22:53:13,283 - Received From ('127.0.0.1', 50954): "AT Goloman -160474129541.63965 koji +1-1 162002393934.922232 Goloman"
+INFO - 2018-06-05 22:53:13,283 - Recipient: Wilkes Output: 'AT Goloman -160474129541.63965 koji +1-1 162002393934.922232 Goloman Hands\n'
+INFO - 2018-06-05 22:53:13,284 - Received From ('127.0.0.1', 50968): "AT Goloman -160474129541.63965 koji +1-1 162002393934.922232 Goloman Wilkes"
+INFO - 2018-06-05 22:53:13,285 - Received From ('127.0.0.1', 50968): "AT Goloman -160474129541.63965 koji +1-1 162002393934.922232 Goloman Holiday Wilkes"
+INFO - 2018-06-05 22:53:13,289 - New Connection: ('127.0.0.1', 51052)
+INFO - 2018-06-05 22:53:13,290 - New Connection: ('127.0.0.1', 51056)
+INFO - 2018-06-05 22:53:13,290 - New Connection: ('127.0.0.1', 51064)
+INFO - 2018-06-05 22:53:13,291 - New Connection: ('127.0.0.1', 51068)
+INFO - 2018-06-05 22:53:30,987 - Received From ('127.0.0.1', 50968): "AT Holiday +8240476.066540241 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Wilkes"
+INFO - 2018-06-05 22:53:30,989 - Received From ('127.0.0.1', 50954): "AT Holiday +8240476.066540241 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Goloman"
+INFO - 2018-06-05 22:53:30,989 - Recipient: Wilkes Output: 'AT Holiday +8240476.066540241 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Goloman Hands\n'
+INFO - 2018-06-05 22:53:30,990 - Connected To Goloman
+INFO - 2018-06-05 22:53:30,990 - Recipient: Goloman Output: 'AT Holiday +8240476.066540241 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Wilkes Hands\n'
+INFO - 2018-06-05 22:53:30,991 - Received From ('127.0.0.1', 50968): "AT Holiday +8240476.066540241 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Goloman Wilkes"
+INFO - 2018-06-05 22:53:30,991 - Received From ('127.0.0.1', 50954): "AT Holiday +8240476.066540241 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Wilkes Goloman"
+INFO - 2018-06-05 22:55:59,683 - Received From ('127.0.0.1', 50954): "AT Goloman -91759375.2366693 potato -34.068930+118.445127 1620023934.918963997 Goloman"
+INFO - 2018-06-05 22:55:59,684 - Recipient: Wilkes Output: 'AT Goloman -91759375.2366693 potato -34.068930+118.445127 1620023934.918963997 Goloman Hands\n'
+INFO - 2018-06-05 22:55:59,684 - Received From ('127.0.0.1', 50968): "AT Goloman -91759375.2366693 potato -34.068930+118.445127 1620023934.918963997 Goloman Wilkes"
+INFO - 2018-06-05 22:55:59,685 - Received From ('127.0.0.1', 50968): "AT Goloman -91759375.2366693 potato -34.068930+118.445127 1620023934.918963997 Goloman Holiday Wilkes"
+INFO - 2018-06-05 22:55:59,687 - New Connection: ('127.0.0.1', 51384)
+INFO - 2018-06-05 22:55:59,687 - New Connection: ('127.0.0.1', 51390)
+INFO - 2018-06-05 22:55:59,690 - New Connection: ('127.0.0.1', 51400)
+INFO - 2018-06-05 22:55:59,692 - New Connection: ('127.0.0.1', 51408)
+INFO - 2018-06-05 22:56:00,680 - Received From ('127.0.0.1', 50954): "AT Goloman -160474129374.2422 koji +1-1 162002393934.922232 Goloman"
+INFO - 2018-06-05 22:56:00,681 - Recipient: Wilkes Output: 'AT Goloman -160474129374.2422 koji +1-1 162002393934.922232 Goloman Hands\n'
+INFO - 2018-06-05 22:56:00,681 - Received From ('127.0.0.1', 50968): "AT Goloman -160474129374.2422 koji +1-1 162002393934.922232 Goloman Wilkes"
+INFO - 2018-06-05 22:56:00,682 - Received From ('127.0.0.1', 50968): "AT Goloman -160474129374.2422 koji +1-1 162002393934.922232 Goloman Holiday Wilkes"
+INFO - 2018-06-05 22:56:00,684 - New Connection: ('127.0.0.1', 51426)
+INFO - 2018-06-05 22:56:00,685 - New Connection: ('127.0.0.1', 51428)
+INFO - 2018-06-05 22:56:00,687 - New Connection: ('127.0.0.1', 51438)
+INFO - 2018-06-05 22:56:00,689 - New Connection: ('127.0.0.1', 51446)
+INFO - 2018-06-05 22:57:23,503 - Received From ('127.0.0.1', 50954): "AT Holiday +8240708.582090616 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Goloman"
+INFO - 2018-06-05 22:57:23,503 - Recipient: Wilkes Output: 'AT Holiday +8240708.582090616 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Goloman Hands\n'
+INFO - 2018-06-05 22:57:23,503 - Received From ('127.0.0.1', 50968): "AT Holiday +8240708.582090616 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Wilkes"
+INFO - 2018-06-05 22:57:23,504 - Recipient: Goloman Output: 'AT Holiday +8240708.582090616 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Wilkes Hands\n'
+INFO - 2018-06-05 22:57:23,505 - Received From ('127.0.0.1', 50954): "AT Holiday +8240708.582090616 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Wilkes Goloman"
+INFO - 2018-06-05 22:57:23,505 - Received From ('127.0.0.1', 50968): "AT Holiday +8240708.582090616 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Goloman Wilkes"
+INFO - 2018-06-06 23:19:05,321 - Started Hands
+INFO - 2018-06-06 23:20:46,371 - New Connection: ('127.0.0.1', 41322)
+INFO - 2018-06-06 23:20:46,372 - Received From ('127.0.0.1', 41322): "IAMAT kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997"
+INFO - 2018-06-06 23:20:46,372 - To Client ('127.0.0.1', 41322): 'AT Hands +8328511.453390033609130859375 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997'
+INFO - 2018-06-06 23:20:46,374 - Connected To Goloman
+INFO - 2018-06-06 23:20:46,374 - Recipient: Goloman Output: 'AT Hands +8328511.453390033609130859375 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Hands\n'
+INFO - 2018-06-06 23:20:46,374 - Connected To Wilkes
+INFO - 2018-06-06 23:20:46,374 - Recipient: Wilkes Output: 'AT Hands +8328511.453390033609130859375 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Hands\n'
+INFO - 2018-06-06 23:20:46,374 - Message propagated to available servers.
+INFO - 2018-06-06 23:20:46,376 - New Connection: ('127.0.0.1', 41336)
+INFO - 2018-06-06 23:20:46,377 - New Connection: ('127.0.0.1', 41338)
+INFO - 2018-06-06 23:20:46,379 - New Connection: ('127.0.0.1', 41340)
+INFO - 2018-06-06 23:20:46,379 - New Connection: ('127.0.0.1', 41342)
+INFO - 2018-06-06 23:20:46,380 - New Connection: ('127.0.0.1', 41352)
+INFO - 2018-06-06 23:20:46,380 - New Connection: ('127.0.0.1', 41356)
+INFO - 2018-06-06 23:20:46,383 - New Connection: ('127.0.0.1', 41360)
+INFO - 2018-06-06 23:20:46,383 - New Connection: ('127.0.0.1', 41362)
+INFO - 2018-06-06 23:20:46,383 - New Connection: ('127.0.0.1', 41364)
+INFO - 2018-06-06 23:20:46,385 - New Connection: ('127.0.0.1', 41370)
+INFO - 2018-06-06 23:20:46,385 - New Connection: ('127.0.0.1', 41372)
+INFO - 2018-06-06 23:20:46,385 - New Connection: ('127.0.0.1', 41376)
+INFO - 2018-06-06 23:20:46,386 - New Connection: ('127.0.0.1', 41380)
+INFO - 2018-06-06 23:20:46,388 - New Connection: ('127.0.0.1', 41388)
+INFO - 2018-06-06 23:20:46,390 - New Connection: ('127.0.0.1', 41396)
+INFO - 2018-06-06 23:20:46,392 - New Connection: ('127.0.0.1', 41404)
+INFO - 2018-06-06 23:20:47,370 - Received From ('127.0.0.1', 41322): "IAMAT graham +118.335-34.22333 1520023934.811232"
+INFO - 2018-06-06 23:20:47,370 - To Client ('127.0.0.1', 41322): 'AT Hands +8328512.559125990264892578125 graham +118.335-34.22333 1520023934.811232'
+INFO - 2018-06-06 23:20:47,370 - Recipient: Goloman Output: 'AT Hands +8328512.559125990264892578125 graham +118.335-34.22333 1520023934.811232 Hands\n'
+INFO - 2018-06-06 23:20:47,371 - Recipient: Wilkes Output: 'AT Hands +8328512.559125990264892578125 graham +118.335-34.22333 1520023934.811232 Hands\n'
+INFO - 2018-06-06 23:20:47,371 - Message propagated to available servers.
+INFO - 2018-06-06 23:20:47,372 - New Connection: ('127.0.0.1', 41412)
+INFO - 2018-06-06 23:20:47,372 - New Connection: ('127.0.0.1', 41414)
+INFO - 2018-06-06 23:20:47,373 - New Connection: ('127.0.0.1', 41416)
+INFO - 2018-06-06 23:20:47,373 - New Connection: ('127.0.0.1', 41418)
+INFO - 2018-06-06 23:20:47,374 - New Connection: ('127.0.0.1', 41422)
+INFO - 2018-06-06 23:20:47,374 - New Connection: ('127.0.0.1', 41426)
+INFO - 2018-06-06 23:20:47,376 - New Connection: ('127.0.0.1', 41428)
+INFO - 2018-06-06 23:20:47,376 - New Connection: ('127.0.0.1', 41430)
+INFO - 2018-06-06 23:20:47,376 - New Connection: ('127.0.0.1', 41432)
+INFO - 2018-06-06 23:20:47,376 - New Connection: ('127.0.0.1', 41438)
+INFO - 2018-06-06 23:20:47,377 - New Connection: ('127.0.0.1', 41440)
+INFO - 2018-06-06 23:20:47,377 - New Connection: ('127.0.0.1', 41442)
+INFO - 2018-06-06 23:20:47,377 - New Connection: ('127.0.0.1', 41446)
+INFO - 2018-06-06 23:20:47,378 - New Connection: ('127.0.0.1', 41450)
+INFO - 2018-06-06 23:20:47,381 - New Connection: ('127.0.0.1', 41456)
+INFO - 2018-06-06 23:20:47,382 - New Connection: ('127.0.0.1', 41464)
+INFO - 2018-06-06 23:20:47,385 - New Connection: ('127.0.0.1', 41472)
+INFO - 2018-06-06 23:20:47,386 - New Connection: ('127.0.0.1', 41480)
+INFO - 2018-06-06 23:20:48,373 - Lost Connection: ('127.0.0.1', 41322)
+INFO - 2018-06-06 23:23:13,779 - New Connection: ('127.0.0.1', 41802)
+INFO - 2018-06-06 23:23:13,780 - Received From ('127.0.0.1', 41802): "WHO AM IIIIII"
+INFO - 2018-06-06 23:23:13,780 - To Client ('127.0.0.1', 41802): '? WHO AM IIIIII\r\n'
+INFO - 2018-06-06 23:23:14,779 - Lost Connection: ('127.0.0.1', 41802)

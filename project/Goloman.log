@@ -1,98 +1,119 @@
-INFO - 2018-06-05 18:11:30,852  - Started Goloman
-INFO - 2018-06-05 18:12:06,970  - New Connection: ('127.0.0.1', 61703)
-INFO - 2018-06-05 18:12:11,566  - Received From ('127.0.0.1', 61703): "hello"
-INFO - 2018-06-05 18:12:11,566  - To Client ('127.0.0.1', 61703): "? hello
-"
-INFO - 2018-06-05 18:12:26,380  - Received From ('127.0.0.1', 61703): "IAMAT kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997"
-INFO - 2018-06-05 18:12:26,380  - To Client ('127.0.0.1', 61703): "AT Goloman +8223611.461388111 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997"
-INFO - 2018-06-05 18:12:26,381  - Server Hands Up
-INFO - 2018-06-05 18:12:26,381  - Recipient: Hands Output: "AT Goloman +8223611.461388111 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman
-"
-INFO - 2018-06-05 18:12:26,382  - Server Holiday Up
-INFO - 2018-06-05 18:12:26,382  - Recipient: Holiday Output: "AT Goloman +8223611.461388111 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman
-"
-INFO - 2018-06-05 18:12:26,382  - Server Wilkes Up
-INFO - 2018-06-05 18:12:26,382  - Recipient: Wilkes Output: "AT Goloman +8223611.461388111 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman
-"
-INFO - 2018-06-05 18:12:32,548  - Received From ('127.0.0.1', 61703): "WHATSAT kiwi.cs.ucla.edu 10 5"
-INFO - 2018-06-05 18:12:32,961  - From Google : {'html_attributions': [], 'results': [{'geometry': {'location': {'lat': 34.068864, 'lng': -118.4450156}, 'viewport': {'northeast': {'lat': 34.07021298029149, 'lng': -118.4436666197085}, 'southwest': {'lat': 34.0675150197085, 'lng': -118.4463645802915}}}, 'icon': 'https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png', 'id': 'ef162ea4f60a0b3933fae75544dba377b996befa', 'name': 'Westwood Plaza', 'place_id': 'ChIJ6Re7qYi8woAR22jVhVAye2M', 'reference': 'CmRbAAAAE7KU7ErueTrtLBoOY5bKnmLl7N5BqfoL1jNCQUda7QrMYFf97OHUmmI2ILkcfvn23fQRK_y7vkymPgPmkjOogEHmfT_UNHoNoV0k7k_9GOzZybRcLGCqLHiGS1k4nkHOEhC0C_BL4U3RvAFcXVFQR_PZGhQvYak21gnMDzPqIW2qbj6E31kEQA', 'scope': 'GOOGLE', 'types': ['route'], 'vicinity': 'Los Angeles'}, {'geometry': {'location': {'lat': 34.068921, 'lng': -118.4451811}, 'viewport': {'northeast': {'lat': 34.08632165, 'lng': -118.4298687}, 'southwest': {'lat': 34.05637465, 'lng': -118.4632287}}}, 'icon': 'https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png', 'id': '4d56f16ad3d8976d49143fa4fdfffbc0a7ce8e39', 'name': 'University of California, Los Angeles', 'photos': [{'height': 3024, 'html_attributions': ['<a href="https://maps.google.com/maps/contrib/117926064907260379503/photos">Matt Peyton</a>'], 'photo_reference': 'CmRZAAAA9H4tbYLWjZz53LjlVdetKzM7EDgIwpWAoWloL630IODefNHQ27DEZM8130gIhJNnZlPJX3R0KANpDmVHcaugkg-2CL-YWlLe29610P9SUFLJWzH7UYg-8ahnl9c7G5MSEhBYs4LwJ3f7c3HiOko7dI0SGhRBdqzIspGA2zBWLQPb34DhALNMsg', 'width': 4032}], 'place_id': 'ChIJZQ9c8IW8woARN0gTXFiTqSU', 'rating': 4.5, 'reference': 'CmRRAAAAnf90x91LtBtzOeHKZp8MbdJTxWQ1J5kvH5RKO3QDX-A4WgtDRBQ2nzcor9ZwuTOgqXMWwgtU0c2StbMLubbn2OaEqbdIoJDIYvxXANJhzuWE5SEP78B-ZLPEdISv76GPEhDWkI3BgO0KGPVNe2XsIlNGGhRr3w3uh5vHi7_m30ZpMoIvb9Urag', 'scope': 'GOOGLE', 'types': ['university', 'point_of_interest', 'establishment'], 'vicinity': 'Los Angeles'}, {'geometry': {'location': {'lat': 34.068921, 'lng': -118.4451811}, 'viewport': {'northeast': {'lat': 34.0702699802915, 'lng': -118.4438321197085}, 'southwest': {'lat': 34.0675720197085, 'lng': -118.4465300802915}}}, 'icon': 'https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png', 'id': '05fd8bf85bbaa070a3a5456fe79271816aee00ca', 'name': "UCLA Alzheimer's and Dementia Care Program", 'opening_hours': {'open_now': False, 'weekday_text': []}, 'place_id': 'ChIJV9EqEDS7woAR-jAR0xH0lSQ', 'reference': 'CmRRAAAAtFJY--F0uNl6Uma9AJasX2-cEPF6Umwnf1_Xy03gl2b5MV-fal5CUonRkauDgOenuMEL382nIDc5lHT1gz0SfBVDbwLgx3rpLI2uCSUWoDTjtGsQ7RlllIRF9lDz70FaEhDmNHWFnBX4Ttp51ZiI24KiGhTwebOinl-_HBPis9a4HsF1tNXJeQ', 'scope': 'GOOGLE', 'types': ['health', 'point_of_interest', 'establishment'], 'vicinity': '200 UCLA, Medical Plaza Driveway Suite #365A, Los Angeles'}, {'geometry': {'location': {'lat': 34.0522342, 'lng': -118.2436849}, 'viewport': {'northeast': {'lat': 34.3373061, 'lng': -118.1552891}, 'southwest': {'lat': 33.7036519, 'lng': -118.6681759}}}, 'icon': 'https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png', 'id': '7f7b7d8118ae8db8ed3f541159ac928c484d12ad', 'name': 'Los Angeles', 'photos': [{'height': 1280, 'html_attributions': ['<a href="https://maps.google.com/maps/contrib/109425452136283017703/photos">Jasmine Bustillos</a>'], 'photo_reference': 'CmRaAAAA3KKTWFZ-S97HaC9A2kqna_8SgByBAXtIW3zlc2NBcQkEF1Ig3kGnj81zfwfucxU9GxhFlTZSc-hMMkg-eeSxE41R6Y6obqxuSfTSnJVIdcupK1q6lxBGE6h4Ntqb2d0TEhD90G58_QyryRNG5VZT-i93GhS-vbeUM_WNHfOW2kixNkH5zIjAmw', 'width': 1920}], 'place_id': 'ChIJE9on3F3HwoAR9AhGJW_fL-I', 'reference': 'CmRbAAAA63cNt21vxnwuUkZVz7mpq6GJe_DCloin6DHGWNyVOONiE_Ac1T-SCQQ-LLokBeQsixBc42gq1ONCmYgBJ6K0pN2Aj5Wq5uH4scCXjzzal_CRxKBKw7-wQoR4AuZlYOifEhC1uXd_qh2WcHwnUfyJqTQIGhQ1ktvWM1fI-GCbmDYfSBCOAerPzg', 'scope': 'GOOGLE', 'types': ['locality', 'political'], 'vicinity': 'Los Angeles'}], 'status': 'OK'}
-INFO - 2018-06-05 18:12:32,962  - To Client ('127.0.0.1', 61703): 'AT Goloman +8223611.461388111 kiwi.cs.ucla.edu +34.06893-118.445127 1520023934.918963997\n{\n   "html_attributions": [],\n   "results": [\n      {\n         "geometry": {\n            "location": {\n               "lat": 34.068864,\n               "lng": -118.4450156\n            },\n            "viewport": {\n               "northeast": {\n                  "lat": 34.07021298029149,\n                  "lng": -118.4436666197085\n               },\n               "southwest": {\n                  "lat": 34.0675150197085,\n                  "lng": -118.4463645802915\n               }\n            }\n         },\n         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",\n         "id": "ef162ea4f60a0b3933fae75544dba377b996befa",\n         "name": "Westwood Plaza",\n         "place_id": "ChIJ6Re7qYi8woAR22jVhVAye2M",\n         "reference": "CmRbAAAAE7KU7ErueTrtLBoOY5bKnmLl7N5BqfoL1jNCQUda7QrMYFf97OHUmmI2ILkcfvn23fQRK_y7vkymPgPmkjOogEHmfT_UNHoNoV0k7k_9GOzZybRcLGCqLHiGS1k4nkHOEhC0C_BL4U3RvAFcXVFQR_PZGhQvYak21gnMDzPqIW2qbj6E31kEQA",\n         "scope": "GOOGLE",\n         "types": [\n            "route"\n         ],\n         "vicinity": "Los Angeles"\n      },\n      {\n         "geometry": {\n            "location": {\n               "lat": 34.068921,\n               "lng": -118.4451811\n            },\n            "viewport": {\n               "northeast": {\n                  "lat": 34.08632165,\n                  "lng": -118.4298687\n               },\n               "southwest": {\n                  "lat": 34.05637465,\n                  "lng": -118.4632287\n               }\n            }\n         },\n         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/school-71.png",\n         "id": "4d56f16ad3d8976d49143fa4fdfffbc0a7ce8e39",\n         "name": "University of California, Los Angeles",\n         "photos": [\n            {\n               "height": 3024,\n               "html_attributions": [\n                  "<a href=\\"https://maps.google.com/maps/contrib/117926064907260379503/photos\\">Matt Peyton</a>"\n               ],\n               "photo_reference": "CmRZAAAA9H4tbYLWjZz53LjlVdetKzM7EDgIwpWAoWloL630IODefNHQ27DEZM8130gIhJNnZlPJX3R0KANpDmVHcaugkg-2CL-YWlLe29610P9SUFLJWzH7UYg-8ahnl9c7G5MSEhBYs4LwJ3f7c3HiOko7dI0SGhRBdqzIspGA2zBWLQPb34DhALNMsg",\n               "width": 4032\n            }\n         ],\n         "place_id": "ChIJZQ9c8IW8woARN0gTXFiTqSU",\n         "rating": 4.5,\n         "reference": "CmRRAAAAnf90x91LtBtzOeHKZp8MbdJTxWQ1J5kvH5RKO3QDX-A4WgtDRBQ2nzcor9ZwuTOgqXMWwgtU0c2StbMLubbn2OaEqbdIoJDIYvxXANJhzuWE5SEP78B-ZLPEdISv76GPEhDWkI3BgO0KGPVNe2XsIlNGGhRr3w3uh5vHi7_m30ZpMoIvb9Urag",\n         "scope": "GOOGLE",\n         "types": [\n            "university",\n            "point_of_interest",\n            "establishment"\n         ],\n         "vicinity": "Los Angeles"\n      },\n      {\n         "geometry": {\n            "location": {\n               "lat": 34.068921,\n               "lng": -118.4451811\n            },\n            "viewport": {\n               "northeast": {\n                  "lat": 34.0702699802915,\n                  "lng": -118.4438321197085\n               },\n               "southwest": {\n                  "lat": 34.0675720197085,\n                  "lng": -118.4465300802915\n               }\n            }\n         },\n         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",\n         "id": "05fd8bf85bbaa070a3a5456fe79271816aee00ca",\n         "name": "UCLA Alzheimer\'s and Dementia Care Program",\n         "opening_hours": {\n            "open_now": false,\n            "weekday_text": []\n         },\n         "place_id": "ChIJV9EqEDS7woAR-jAR0xH0lSQ",\n         "reference": "CmRRAAAAtFJY--F0uNl6Uma9AJasX2-cEPF6Umwnf1_Xy03gl2b5MV-fal5CUonRkauDgOenuMEL382nIDc5lHT1gz0SfBVDbwLgx3rpLI2uCSUWoDTjtGsQ7RlllIRF9lDz70FaEhDmNHWFnBX4Ttp51ZiI24KiGhTwebOinl-_HBPis9a4HsF1tNXJeQ",\n         "scope": "GOOGLE",\n         "types": [\n            "health",\n            "point_of_interest",\n            "establishment"\n         ],\n         "vicinity": "200 UCLA, Medical Plaza Driveway Suite #365A, Los Angeles"\n      },\n      {\n         "geometry": {\n            "location": {\n               "lat": 34.0522342,\n               "lng": -118.2436849\n            },\n            "viewport": {\n               "northeast": {\n                  "lat": 34.3373061,\n                  "lng": -118.1552891\n               },\n               "southwest": {\n                  "lat": 33.7036519,\n                  "lng": -118.6681759\n               }\n            }\n         },\n         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",\n         "id": "7f7b7d8118ae8db8ed3f541159ac928c484d12ad",\n         "name": "Los Angeles",\n         "photos": [\n            {\n               "height": 1280,\n               "html_attributions": [\n                  "<a href=\\"https://maps.google.com/maps/contrib/109425452136283017703/photos\\">Jasmine Bustillos</a>"\n               ],\n               "photo_reference": "CmRaAAAA3KKTWFZ-S97HaC9A2kqna_8SgByBAXtIW3zlc2NBcQkEF1Ig3kGnj81zfwfucxU9GxhFlTZSc-hMMkg-eeSxE41R6Y6obqxuSfTSnJVIdcupK1q6lxBGE6h4Ntqb2d0TEhD90G58_QyryRNG5VZT-i93GhS-vbeUM_WNHfOW2kixNkH5zIjAmw",\n               "width": 1920\n            }\n         ],\n         "place_id": "ChIJE9on3F3HwoAR9AhGJW_fL-I",\n         "reference": "CmRbAAAA63cNt21vxnwuUkZVz7mpq6GJe_DCloin6DHGWNyVOONiE_Ac1T-SCQQ-LLokBeQsixBc42gq1ONCmYgBJ6K0pN2Aj5Wq5uH4scCXjzzal_CRxKBKw7-wQoR4AuZlYOifEhC1uXd_qh2WcHwnUfyJqTQIGhQ1ktvWM1fI-GCbmDYfSBCOAerPzg",\n         "scope": "GOOGLE",\n         "types": [\n            "locality",\n            "political"\n         ],\n         "vicinity": "Los Angeles"\n      }\n   ],\n   "status": "OK"\n}\n\n'
-INFO - 2018-06-05 18:12:40,931  - Received From ('127.0.0.1', 61703): "IAMAT kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997"
-INFO - 2018-06-05 18:12:40,932  - To Client ('127.0.0.1', 61703): "AT Goloman +8223626.012220383 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997"
-INFO - 2018-06-05 18:12:40,932  - Recipient: Hands Output: "AT Goloman +8223626.012220383 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman
-"
-INFO - 2018-06-05 18:12:40,932  - Recipient: Holiday Output: "AT Goloman +8223626.012220383 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman
-"
-INFO - 2018-06-05 18:12:40,932  - Recipient: Wilkes Output: "AT Goloman +8223626.012220383 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman
-"
-INFO - 2018-06-05 18:12:44,963  - Lost Connection: ('127.0.0.1', 61703)
-INFO - 2018-06-05 18:14:06,385  - New Connection: ('127.0.0.1', 61784)
-INFO - 2018-06-05 18:14:06,385  - Received From ('127.0.0.1', 61784): "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday"
-INFO - 2018-06-05 18:14:06,385  - Recipient: Hands Output: "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Goloman
-"
-INFO - 2018-06-05 18:14:06,386  - Recipient: Wilkes Output: "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Goloman
-"
-INFO - 2018-06-05 18:14:06,386  - New Connection: ('127.0.0.1', 61785)
-INFO - 2018-06-05 18:14:06,388  - Received From ('127.0.0.1', 61785): "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Wilkes"
-INFO - 2018-06-05 18:14:06,388  - Recipient: Hands Output: "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Wilkes Goloman
-"
-INFO - 2018-06-05 18:14:06,390  - New Connection: ('127.0.0.1', 61786)
-INFO - 2018-06-05 18:14:06,391  - New Connection: ('127.0.0.1', 61787)
-INFO - 2018-06-05 18:14:06,392  - Received From ('127.0.0.1', 61786): "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Wilkes Hands"
-INFO - 2018-06-05 18:14:06,392  - Received From ('127.0.0.1', 61787): "AT Welsh -91776288.53889227 Graham -34.068930+118.445127 1620023934.918963997 Welsh Holiday Wilkes Hands"
-INFO - 2018-06-05 18:14:48,735  - Lost Connection: ('127.0.0.1', 61785)
-INFO - 2018-06-05 18:14:49,234  - Lost Connection: ('127.0.0.1', 61784)
-INFO - 2018-06-05 18:14:49,760  - Lost Connection: ('127.0.0.1', 61786)
-INFO - 2018-06-05 18:14:49,760  - Lost Connection: ('127.0.0.1', 61787)
-INFO - 2018-06-05 19:23:00,089 - Started Goloman
-INFO - 2018-06-05 19:23:08,483 - New Connection: ('127.0.0.1', 65138)
-INFO - 2018-06-05 19:23:10,144 - Received From ('127.0.0.1', 65138): "boogers"
-INFO - 2018-06-05 19:23:10,145 - To Client ('127.0.0.1', 65138): '? boogers\r\n'
-INFO - 2018-06-05 19:23:12,327 - Received From ('127.0.0.1', 65138): "boobs"
-INFO - 2018-06-05 19:23:12,327 - To Client ('127.0.0.1', 65138): '? boobs\r\n'
-INFO - 2018-06-05 19:23:17,623 - Received From ('127.0.0.1', 65138): "howdy fuckface"
-INFO - 2018-06-05 19:23:17,623 - To Client ('127.0.0.1', 65138): '? howdy fuckface\r\n'
-INFO - 2018-06-05 19:23:20,501 - Received From ('127.0.0.1', 65138): ""
-INFO - 2018-06-05 19:23:20,501 - To Client ('127.0.0.1', 65138): '? \x03\x03\x03\r\n'
-INFO - 2018-06-05 19:23:25,479 - Lost Connection: ('127.0.0.1', 65138)
-INFO - 2018-06-05 21:15:07,136 - Started Goloman
-INFO - 2018-06-05 21:15:15,963 - New Connection: ('127.0.0.1', 52651)
-INFO - 2018-06-05 21:15:31,286 - Received From ('127.0.0.1', 52651): "IAMAT graham 123213+2321332 12321.1123123"
-INFO - 2018-06-05 21:15:31,286 - To Client ('127.0.0.1', 52651): '? IAMAT graham 123213+2321332 12321.1123123\r\n'
-INFO - 2018-06-05 21:15:45,152 - Received From ('127.0.0.1', 52651): "[A[B[BIAMAT graham 123213+2321332 12321.1123123[D"
-INFO - 2018-06-05 21:15:45,153 - To Client ('127.0.0.1', 52651): '? \x1b[A\x1b[B\x1b[BIAMAT graham 123213+2321332 12321.1123123\x1b[D\r\n'
-INFO - 2018-06-05 21:15:53,573 - Received From ('127.0.0.1', 52651): "[AIAMAT graham "
-INFO - 2018-06-05 21:15:53,573 - To Client ('127.0.0.1', 52651): '? \x1b[AIAMAT graham \x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\r\n'
-INFO - 2018-06-05 21:16:08,683 - Received From ('127.0.0.1', 52651): "IAMAT graham +12321.12131-123123+1/"
-INFO - 2018-06-05 21:16:08,684 - To Client ('127.0.0.1', 52651): '? IAMAT graham +12321.12131-123123+1\x08\x08/\r\n'
-INFO - 2018-06-05 21:16:21,607 - Received From ('127.0.0.1', 52651): "IAMAT graham +1232.32312-12312.123123 12321.1232323"
-INFO - 2018-06-05 21:16:21,607 - To Client ('127.0.0.1', 52651): '? IAMAT graham +1232.32312-12312.123123 12321.1232323\r\n'
-INFO - 2018-06-05 21:16:21,607 - To Client ('127.0.0.1', 52651): 'AT Goloman +1528246260.4832985 graham +1232.32312-12312.123123 12321.1232323'
-INFO - 2018-06-05 21:42:02,986 - Started Goloman
-INFO - 2018-06-05 21:42:25,515 - New Connection: ('127.0.0.1', 53898)
-INFO - 2018-06-05 21:42:49,983 - Received From ('127.0.0.1', 53898): "IAMAT therer +12321.12312-123123.123123 123123.1231231"
-INFO - 2018-06-05 21:42:49,983 - To Client ('127.0.0.1', 53898): 'AT Goloman +1528137046.8602579 therer +12321.12312-123123.123123 123123.1231231'
-INFO - 2018-06-05 21:43:01,507 - Lost Connection: ('127.0.0.1', 53898)
-INFO - 2018-06-05 21:48:38,187 - Started Goloman
-INFO - 2018-06-05 21:48:49,877 - New Connection: ('127.0.0.1', 54158)
-INFO - 2018-06-05 21:48:55,608 - Received From ('127.0.0.1', 54158): "IAMAT Graham -34.068930+118.445127 1620023934.918963997"
-INFO - 2018-06-05 21:48:55,608 - To Client ('127.0.0.1', 54158): 'AT Goloman -91763399.31067061 Graham -34.068930+118.445127 1620023934.918963997'
-INFO - 2018-06-05 21:58:10,252 - Started Goloman
-INFO - 2018-06-05 21:58:22,105 - New Connection: ('127.0.0.1', 54533)
-INFO - 2018-06-05 21:58:24,640 - Received From ('127.0.0.1', 54533): "IAMAT Graham -34.068930+118.445127 1620023934.918963997"
-INFO - 2018-06-05 21:58:24,640 - To Client ('127.0.0.1', 54533): 'AT Goloman -91762830.27812362 Graham -34.068930+118.445127 1620023934.918963997'
-INFO - 2018-06-05 21:58:24,641 - Connected To Hands
-INFO - 2018-06-05 21:58:24,641 - Recipient: Hands Output: 'AT Goloman -91762830.27812362 Graham -34.068930+118.445127 1620023934.918963997 Goloman\n'
-INFO - 2018-06-06 20:39:50,557 - Started Goloman
-INFO - 2018-06-06 20:40:15,544 - New Connection: ('127.0.0.1', 58078)
-INFO - 2018-06-06 20:40:16,163 - Received From ('127.0.0.1', 58078): "IAMAT kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997"
-INFO - 2018-06-06 20:40:16,163 - To Client ('127.0.0.1', 58078): 'AT Goloman +8318881.244376809961059570312 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997'
-INFO - 2018-06-06 20:40:16,164 - Connected To Hands
-INFO - 2018-06-06 20:40:16,165 - Recipient: Hands Output: 'AT Goloman +8318881.244376809961059570312 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman\n'
-INFO - 2018-06-06 20:40:16,166 - New Connection: ('127.0.0.1', 58083)
-INFO - 2018-06-06 20:41:11,851 - Lost Connection: ('127.0.0.1', 58078)
-ERROR - 2018-06-06 20:41:11,870 - Task was destroyed but it is pending!
-task: <Task pending coro=<server_class.server_routine() done, defined at server.py:200> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x00000000039C5F48>()]>>
-INFO - 2018-06-06 20:41:11,871 - Lost Connection: ('127.0.0.1', 58083)
-ERROR - 2018-06-06 20:41:11,871 - Task was destroyed but it is pending!
-task: <Task pending coro=<server_class.server_routine() done, defined at server.py:200> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x00000000039F83A8>()]>>
+INFO - 2018-06-05 22:47:45,003 - Started Goloman
+INFO - 2018-06-05 22:53:12,283 - New Connection: ('127.0.0.1', 59910)
+INFO - 2018-06-05 22:53:12,284 - Received From ('127.0.0.1', 59910): "IAMAT potato -34.068930+118.445127 1620023934.918963997"
+INFO - 2018-06-05 22:53:12,284 - To Client ('127.0.0.1', 59910): 'AT Goloman -91759542.63471651 potato -34.068930+118.445127 1620023934.918963997'
+INFO - 2018-06-05 22:53:12,286 - Connected To Hands
+INFO - 2018-06-05 22:53:12,286 - Recipient: Hands Output: 'AT Goloman -91759542.63471651 potato -34.068930+118.445127 1620023934.918963997 Goloman\n'
+INFO - 2018-06-05 22:53:12,286 - Connected To Holiday
+INFO - 2018-06-05 22:53:12,286 - Recipient: Holiday Output: 'AT Goloman -91759542.63471651 potato -34.068930+118.445127 1620023934.918963997 Goloman\n'
+INFO - 2018-06-05 22:53:12,286 - Connected To Wilkes
+INFO - 2018-06-05 22:53:12,286 - Recipient: Wilkes Output: 'AT Goloman -91759542.63471651 potato -34.068930+118.445127 1620023934.918963997 Goloman\n'
+INFO - 2018-06-05 22:53:12,287 - New Connection: ('127.0.0.1', 59920)
+INFO - 2018-06-05 22:53:12,288 - New Connection: ('127.0.0.1', 59928)
+INFO - 2018-06-05 22:53:12,288 - New Connection: ('127.0.0.1', 59932)
+INFO - 2018-06-05 22:53:12,290 - New Connection: ('127.0.0.1', 59934)
+INFO - 2018-06-05 22:53:12,290 - New Connection: ('127.0.0.1', 59938)
+INFO - 2018-06-05 22:53:12,291 - New Connection: ('127.0.0.1', 59942)
+INFO - 2018-06-05 22:53:12,292 - New Connection: ('127.0.0.1', 59944)
+INFO - 2018-06-05 22:53:12,292 - New Connection: ('127.0.0.1', 59948)
+INFO - 2018-06-05 22:53:12,292 - New Connection: ('127.0.0.1', 59954)
+INFO - 2018-06-05 22:53:12,293 - New Connection: ('127.0.0.1', 59956)
+INFO - 2018-06-05 22:53:12,294 - New Connection: ('127.0.0.1', 59960)
+INFO - 2018-06-05 22:53:12,294 - New Connection: ('127.0.0.1', 59964)
+INFO - 2018-06-05 22:53:13,282 - Received From ('127.0.0.1', 59910): "IAMAT koji +1-1 162002393934.922232"
+INFO - 2018-06-05 22:53:13,282 - To Client ('127.0.0.1', 59910): 'AT Goloman -160474129541.63965 koji +1-1 162002393934.922232'
+INFO - 2018-06-05 22:53:13,283 - Recipient: Hands Output: 'AT Goloman -160474129541.63965 koji +1-1 162002393934.922232 Goloman\n'
+INFO - 2018-06-05 22:53:13,283 - Recipient: Holiday Output: 'AT Goloman -160474129541.63965 koji +1-1 162002393934.922232 Goloman\n'
+INFO - 2018-06-05 22:53:13,283 - Recipient: Wilkes Output: 'AT Goloman -160474129541.63965 koji +1-1 162002393934.922232 Goloman\n'
+INFO - 2018-06-05 22:53:13,284 - New Connection: ('127.0.0.1', 59972)
+INFO - 2018-06-05 22:53:13,284 - New Connection: ('127.0.0.1', 59974)
+INFO - 2018-06-05 22:53:13,285 - New Connection: ('127.0.0.1', 59976)
+INFO - 2018-06-05 22:53:13,285 - New Connection: ('127.0.0.1', 59980)
+INFO - 2018-06-05 22:53:13,285 - New Connection: ('127.0.0.1', 59982)
+INFO - 2018-06-05 22:53:13,286 - New Connection: ('127.0.0.1', 59984)
+INFO - 2018-06-05 22:53:13,286 - New Connection: ('127.0.0.1', 59986)
+INFO - 2018-06-05 22:53:13,287 - New Connection: ('127.0.0.1', 59988)
+INFO - 2018-06-05 22:53:13,287 - New Connection: ('127.0.0.1', 59994)
+INFO - 2018-06-05 22:53:13,287 - New Connection: ('127.0.0.1', 59996)
+INFO - 2018-06-05 22:53:13,287 - New Connection: ('127.0.0.1', 60000)
+INFO - 2018-06-05 22:53:13,288 - New Connection: ('127.0.0.1', 60002)
+INFO - 2018-06-05 22:53:13,289 - New Connection: ('127.0.0.1', 60008)
+INFO - 2018-06-05 22:53:13,289 - New Connection: ('127.0.0.1', 60012)
+INFO - 2018-06-05 22:53:13,290 - New Connection: ('127.0.0.1', 60020)
+INFO - 2018-06-05 22:53:13,291 - New Connection: ('127.0.0.1', 60024)
+INFO - 2018-06-05 22:53:14,284 - Lost Connection: ('127.0.0.1', 59910)
+INFO - 2018-06-05 22:53:30,987 - New Connection: ('127.0.0.1', 60038)
+INFO - 2018-06-05 22:53:30,988 - Received From ('127.0.0.1', 60038): "AT Holiday +8240476.066540241 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday"
+INFO - 2018-06-05 22:53:30,988 - Recipient: Hands Output: 'AT Holiday +8240476.066540241 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Goloman\n'
+INFO - 2018-06-05 22:53:30,988 - Recipient: Wilkes Output: 'AT Holiday +8240476.066540241 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Goloman\n'
+INFO - 2018-06-05 22:53:30,989 - New Connection: ('127.0.0.1', 60042)
+INFO - 2018-06-05 22:53:30,989 - Received From ('127.0.0.1', 60042): "AT Holiday +8240476.066540241 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Wilkes"
+INFO - 2018-06-05 22:53:30,989 - New Connection: ('127.0.0.1', 60044)
+INFO - 2018-06-05 22:53:30,990 - Recipient: Hands Output: 'AT Holiday +8240476.066540241 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Wilkes Goloman\n'
+INFO - 2018-06-05 22:53:30,990 - Received From ('127.0.0.1', 60044): "AT Holiday +8240476.066540241 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Wilkes Hands"
+INFO - 2018-06-05 22:53:30,991 - New Connection: ('127.0.0.1', 60050)
+INFO - 2018-06-05 22:55:59,681 - New Connection: ('127.0.0.1', 60332)
+INFO - 2018-06-05 22:55:59,682 - Received From ('127.0.0.1', 60332): "IAMAT potato -34.068930+118.445127 1620023934.918963997"
+INFO - 2018-06-05 22:55:59,682 - To Client ('127.0.0.1', 60332): 'AT Goloman -91759375.2366693 potato -34.068930+118.445127 1620023934.918963997'
+INFO - 2018-06-05 22:55:59,682 - Recipient: Hands Output: 'AT Goloman -91759375.2366693 potato -34.068930+118.445127 1620023934.918963997 Goloman\n'
+INFO - 2018-06-05 22:55:59,683 - Recipient: Holiday Output: 'AT Goloman -91759375.2366693 potato -34.068930+118.445127 1620023934.918963997 Goloman\n'
+INFO - 2018-06-05 22:55:59,683 - Recipient: Wilkes Output: 'AT Goloman -91759375.2366693 potato -34.068930+118.445127 1620023934.918963997 Goloman\n'
+INFO - 2018-06-05 22:55:59,686 - New Connection: ('127.0.0.1', 60334)
+INFO - 2018-06-05 22:55:59,687 - New Connection: ('127.0.0.1', 60340)
+INFO - 2018-06-05 22:55:59,689 - New Connection: ('127.0.0.1', 60350)
+INFO - 2018-06-05 22:55:59,690 - New Connection: ('127.0.0.1', 60356)
+INFO - 2018-06-05 22:55:59,692 - New Connection: ('127.0.0.1', 60364)
+INFO - 2018-06-05 22:56:00,680 - Received From ('127.0.0.1', 60332): "IAMAT koji +1-1 162002393934.922232"
+INFO - 2018-06-05 22:56:00,680 - To Client ('127.0.0.1', 60332): 'AT Goloman -160474129374.2422 koji +1-1 162002393934.922232'
+INFO - 2018-06-05 22:56:00,680 - Recipient: Hands Output: 'AT Goloman -160474129374.2422 koji +1-1 162002393934.922232 Goloman\n'
+INFO - 2018-06-05 22:56:00,680 - Recipient: Holiday Output: 'AT Goloman -160474129374.2422 koji +1-1 162002393934.922232 Goloman\n'
+INFO - 2018-06-05 22:56:00,680 - Recipient: Wilkes Output: 'AT Goloman -160474129374.2422 koji +1-1 162002393934.922232 Goloman\n'
+INFO - 2018-06-05 22:56:00,682 - New Connection: ('127.0.0.1', 60372)
+INFO - 2018-06-05 22:56:00,683 - New Connection: ('127.0.0.1', 60378)
+INFO - 2018-06-05 22:56:00,685 - New Connection: ('127.0.0.1', 60388)
+INFO - 2018-06-05 22:56:00,687 - New Connection: ('127.0.0.1', 60394)
+INFO - 2018-06-05 22:56:00,689 - New Connection: ('127.0.0.1', 60402)
+INFO - 2018-06-05 22:56:01,682 - Lost Connection: ('127.0.0.1', 60332)
+INFO - 2018-06-05 22:57:23,502 - Received From ('127.0.0.1', 60038): "AT Holiday +8240708.582090616 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday"
+INFO - 2018-06-05 22:57:23,502 - Recipient: Hands Output: 'AT Holiday +8240708.582090616 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Goloman\n'
+INFO - 2018-06-05 22:57:23,502 - Recipient: Wilkes Output: 'AT Holiday +8240708.582090616 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Goloman\n'
+INFO - 2018-06-05 22:57:23,503 - Received From ('127.0.0.1', 60042): "AT Holiday +8240708.582090616 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Wilkes"
+INFO - 2018-06-05 22:57:23,503 - Recipient: Hands Output: 'AT Holiday +8240708.582090616 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Wilkes Goloman\n'
+INFO - 2018-06-05 22:57:23,504 - Received From ('127.0.0.1', 60044): "AT Holiday +8240708.582090616 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Holiday Wilkes Hands"
+INFO - 2018-06-06 23:18:56,440 - Started Goloman
+INFO - 2018-06-06 23:19:00,728 - Started Goloman
+INFO - 2018-06-06 23:20:46,374 - New Connection: ('127.0.0.1', 50282)
+INFO - 2018-06-06 23:20:46,375 - Received From ('127.0.0.1', 50282): "AT Hands +8328511.453390033609130859375 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Hands"
+INFO - 2018-06-06 23:20:46,377 - New Connection: ('127.0.0.1', 50288)
+INFO - 2018-06-06 23:20:46,377 - Connected To Holiday
+INFO - 2018-06-06 23:20:46,377 - Recipient: Holiday Output: 'AT Hands +8328511.453390033609130859375 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Hands Goloman\n'
+INFO - 2018-06-06 23:20:46,377 - Connected To Wilkes
+INFO - 2018-06-06 23:20:46,377 - Recipient: Wilkes Output: 'AT Hands +8328511.453390033609130859375 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Hands Goloman\n'
+INFO - 2018-06-06 23:20:46,378 - Received From ('127.0.0.1', 50288): "AT Hands +8328511.453390033609130859375 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Hands Wilkes"
+INFO - 2018-06-06 23:20:46,378 - Recipient: Holiday Output: 'AT Hands +8328511.453390033609130859375 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Hands Wilkes Goloman\n'
+INFO - 2018-06-06 23:20:46,378 - Message propagated to available servers.
+INFO - 2018-06-06 23:20:46,379 - Message propagated to available servers.
+INFO - 2018-06-06 23:20:46,380 - New Connection: ('127.0.0.1', 50306)
+INFO - 2018-06-06 23:20:46,380 - New Connection: ('127.0.0.1', 50312)
+INFO - 2018-06-06 23:20:46,382 - Received From ('127.0.0.1', 50306): "AT Hands +8328511.453390033609130859375 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Hands Wilkes Holiday"
+INFO - 2018-06-06 23:20:46,383 - Message propagated to available servers.
+INFO - 2018-06-06 23:20:46,383 - New Connection: ('127.0.0.1', 50324)
+INFO - 2018-06-06 23:20:46,387 - New Connection: ('127.0.0.1', 50342)
+INFO - 2018-06-06 23:20:46,388 - New Connection: ('127.0.0.1', 50350)
+INFO - 2018-06-06 23:20:46,391 - New Connection: ('127.0.0.1', 50356)
+INFO - 2018-06-06 23:20:46,392 - New Connection: ('127.0.0.1', 50364)
+INFO - 2018-06-06 23:20:47,371 - Received From ('127.0.0.1', 50282): "AT Hands +8328512.559125990264892578125 graham +118.335-34.22333 1520023934.811232 Hands"
+INFO - 2018-06-06 23:20:47,371 - Recipient: Holiday Output: 'AT Hands +8328512.559125990264892578125 graham +118.335-34.22333 1520023934.811232 Hands Goloman\n'
+INFO - 2018-06-06 23:20:47,371 - Recipient: Wilkes Output: 'AT Hands +8328512.559125990264892578125 graham +118.335-34.22333 1520023934.811232 Hands Goloman\n'
+INFO - 2018-06-06 23:20:47,371 - Received From ('127.0.0.1', 50288): "AT Hands +8328512.559125990264892578125 graham +118.335-34.22333 1520023934.811232 Hands Wilkes"
+INFO - 2018-06-06 23:20:47,372 - Recipient: Holiday Output: 'AT Hands +8328512.559125990264892578125 graham +118.335-34.22333 1520023934.811232 Hands Wilkes Goloman\n'
+INFO - 2018-06-06 23:20:47,373 - Received From ('127.0.0.1', 50306): "AT Hands +8328512.559125990264892578125 graham +118.335-34.22333 1520023934.811232 Hands Wilkes Holiday"
+INFO - 2018-06-06 23:20:47,373 - Message propagated to available servers.
+INFO - 2018-06-06 23:20:47,374 - New Connection: ('127.0.0.1', 50378)
+INFO - 2018-06-06 23:20:47,374 - Message propagated to available servers.
+INFO - 2018-06-06 23:20:47,374 - New Connection: ('127.0.0.1', 50392)
+INFO - 2018-06-06 23:20:47,375 - Message propagated to available servers.
+INFO - 2018-06-06 23:20:47,381 - New Connection: ('127.0.0.1', 50418)
+INFO - 2018-06-06 23:20:47,382 - New Connection: ('127.0.0.1', 50426)
+INFO - 2018-06-06 23:20:47,385 - New Connection: ('127.0.0.1', 50432)
+INFO - 2018-06-06 23:20:47,386 - New Connection: ('127.0.0.1', 50440)

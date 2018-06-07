@@ -63,8 +63,9 @@ class server_class:
         self.user_data = {} # user_name : [server,skew,lat,lon,time]
         logging.basicConfig(filename='{0}.log'.format(self.name), level=logging.INFO, format='%(levelname)s - %(asctime)s - %(message)s')
         logging.info("Started {0}".format(self.name))
+
         server_port = get_port_num(self.name)
-        routine = asyncio.start_server(self.server_routine, '127.0.0.1', server_port, loop=self.loop)
+        routine = asyncio.start_server(self.server_routine,'127.0.0.1', server_port, loop=self.loop)
         self.server = self.loop.run_until_complete(routine)
         try:
             self.loop.run_forever()
