@@ -117,4 +117,100 @@ which takes a function, ip address and port to listen on, and a loop
 to add tasks to. When the server hears an incoming connection, the 
 server routine function is called and added to the event loop. The event loop
 is capable of handling multiple incoming connections, all of which are 
-run concurrently. When 
+run concurrently.
+	When a client indicates their position, the server must propagate
+the client's location to its neighbour servers. The server routine
+acheives this by calling propagate_message(). As seen in the code 
+snippet ADDCODESNIPPET______, the function uses ensure_future() to
+add tasks to the event loop. These tasks then concurrently
+send messages to the appropriate servers. Because a task is
+added for each individual cant_stop_the_signal() call, communication
+with a slow server can be preempted in favor of a more responsive
+server.
+	If another server/client connects to the current server, 
+connection with the current client is not lost. 
+This is due to asyncio starting a new server routine for each
+incoming connection. Thus, multiple asynchronous inputs can be handled.
+However, because the server routine waits the coroutines
+it calls and said asynchronous calls make usage of asyncio.gather(), 
+a tree like structure of runnable tasks forms. In this tree, parents
+can not run until their children finish. Therefore, while a server
+is propagating data from a client, it will be nonresponsive to that
+client. Despite this downside, this does prevent the creation
+tasks that may step on each other. For instance, if a client 
+indicates their location has changed before the propagation of their
+old location has completed, neighbouring servers may get information 
+out of order. Due to timestamped locations, this would not be an issue,
+but it exemplifies the benefits of the structuring asynchronous
+tasks such that children finish before parents are runnable.
+
+Logging:
+	To monitor the servers and examine the ordering of execution,
+every server logs to a file <server_name>.log. The logging scheme is as
+follows:
+	Message propagated to available servers.
+	Recipient: <neighbouring_server> Output: <AT_message>
+	Connected To <neighbouring_server>
+	Lost Connection To <neighbouring_server>
+	To Client <ip_address_and_port_number>: <escaped_message>
+	From Google: <json_returned_by_google_places>
+
+
+Python vs Java Approach:
+	In general, the Python approach will not be able to obtain
+the speed that a comparable Java approach would manage. Python
+employs dynamic strong typing. A benefit of which is that when 
+types do not agree, correct coercion will be made through
+python builtins or an error will be thrown. This makes Python 
+programs easier to debug with respect to types. However, dynamic 
+typing makes Python programs slower than an equivalent statically
+typed. Additionally, type errors (beyond syntactic) will not
+be caught until an exception is thrown at run time, slowing
+the debugging process. On the other hand, Java is statically strong typed.
+Therefore, Java will catch type errors at compile-time (to byte code that is),
+preventing bugs from going unseen.
+	A benefit of both Java and Python is their garbage collecting
+memory management. Though specifics can vary between implementations,
+both Java and Python reduce chance of error by removing
+the programmer from memory management. Either option reduces the 
+chance of memory leaks or dangling pointers by abstracting such 
+problems away from the user.
+	Both languages are interpreted to an extent. Java's employment 
+of running byte code on a virtual machine with JIT compilation when
+applicable make it faster than Python's straight forward interpretation.
+However, both can be completely compiled to machine code if desired.
+	A downside of the asyncio approach is its limitation to a single
+thread. While this is a benefit for simplifying code, this reduces 
+the possible speed of the program. The Java multithread approach would
+utilize more of the available CPU cores and be able to truly parallelize 
+requests. This makes the ceiling of performance much higher
+for the Java approach. Of course, one must consider the downside of the 
+Java approach: race conditions. Although this use case is nearly embarrasingly
+parellel, threads must coordinate between themselves. This added
+complexity will make coding, debugging, and maintanence more difficult.
+Coordination within an event loop requires less complexity
+than coordination between threads. 
+
+	The server herd use case
+described indicates the precense of many servers, so the load
+borne by each server is ideally minimal. This allows the asyncio
+approach to scale well for a growing number of inexpensive 
+servers. Within a single machine, asyncio would not scale well
+to the number of cores available. In general, asyncio is not thread
+safe and is meant to be used within a single thread.
+	For an environment employing a smaller number of very powerful
+servers, Java's approach would provide better performance. In an 
+environment utilizing a large cluster of inexpensive machines, Python's
+asyncio method is very simple to implement and performs very well.
+
+
+
+Node.js:
+	Node.js and Python's asyncio employ very similar concepts.
+Node.js runs an event loop and handles concurrency using callbacks.
+Similarly, Python's event loop employs futures and tasks to acheive
+the same end. The basic concept to both is to use a single 
+thread and schedule functions concurrently with that thread. 
+Like asyncio, Node.js is not designed for a multithreaded environement.
+Instead the ideal deployment is using many lightweight servers rather
+than heavy processes on a single server.  

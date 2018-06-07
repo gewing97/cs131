@@ -90,6 +90,7 @@ class server_class:
             if friend not in up_stream:
                 propagation_tasks.append(asyncio.ensure_future(self.cant_stop_the_signal(friend, friend_port, message_to_friends)))
         await asyncio.gather(*propagation_tasks)
+        logging.info("Message propagated to available servers.")
 
     async def cant_stop_the_signal(self, friend, friend_port, message_to_friends):
         persistent_connection = False
