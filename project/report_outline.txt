@@ -3,7 +3,7 @@ Introduction
 Basic concept:
     event driven programming
 
-Asyncio : playing well with others
+asyncio : playing well with others
     -ease of use
     -maintainability
     -reliability
@@ -11,6 +11,8 @@ Asyncio : playing well with others
 
 Python concerns:
     -type checking (dynamic strong typing)
+    	-dynamic : slower, catch bugs only when path is taken
+    	-strong : does not implicilty convert types 
     -memory management 
         -private heap
         -object specific allocators
@@ -38,3 +40,81 @@ Recommendation:
             -asyncio good option
         -high quality servers, with high number of cores available to application:
             -Java approach may provide better performance
+
+
+Basic Concept:
+	The asyncio library provides functions for event driven, asynchronous programming.
+By abstracting away various IO methods behind asynchronous functions, the library
+allows for programs to perform IO without blocking. This prevents a program from
+being context switched, allowing it to utilize more CPU time for computations.
+Additionally, the library provides event loops and functions for interacting
+with event loops. These functions include asyncio.ensure_future(), which takes a 
+coroutine (an asynchronous function) and schedules it for execution. When an 
+asynchronous function yields control of the program (using await to wait for 
+some future), the event loop schedules the execution of another function 
+that has received/is awaiting the result of a future. 
+	This powerful concept enables concurrency within a single thread. Similar 
+in concept to a multithreaded program running on a single core (no true concurrent execution),
+asyncio is safer than multithreading due to its avoidance of data races. If preempted by 
+the operating system mid-operation, when the program is resumed the same operation 
+will be resumed. This is the benefit of using yields within a single thread to enable 
+concurrency. The programmer decides when and where context switches can occur. asyncio
+avoids much of the headache involved with multithreading.
+
+
+
+Ease Of Use
+	As is typical with Python, learning to use Asnycio is straight forward and
+well documented. Compared to multithreading, there are far fewer concerns 
+when writing an asyncio program. Rather than thinking about whether
+to lock an object or if deadlock may occur, the programmer can concern
+themselves with writing code pertinent to the task at hand. For the most
+part, the programmer can write a conventional, event driven program.
+To then increase speed and efficient use of CPU time, blocking
+IO can be replaced with non-blocking calls that yield from the current 
+function. By making use of await, asyncio.ensure_future(), and asyncio.gather(), 
+functions can be parallelized in tiers. asyncio.ensure_future() creates
+tasks on the event loop and asyncio.gather() waits for a set of tasks
+to complete. Together, they allow functions to dispatch other functions 
+and wait for their completion. Thus, asyncio makes it easy to write
+programs that listen for input and dispatch various concurrent
+functions to handle input.
+	However, this is not to say that asyncio is error free. It is
+possbile for a programmer to get in trouble if they show little 
+concern for the state of variables when yielding from a function.
+For instance, if correct result requires multiple operations 
+to be performed on a set of variables in sequence, yielding in the 
+middle of the said operations could allow another asynchronous function
+to interact with said variables, leaving the program in an inconsistent state. 
+The troubles of multithreading programming are lessened, but can still be 
+a problem for a careless programmer. 
+	In general, Python and its library support are very well understood
+and maintained. The current popularity of Python has led to the creation
+of a plethora of tutorials and documents describing Python. This makes
+maintaining a Python program much simpler. Understanding a Python paradigm 
+or function is simple due to the documentation and large community support.
+Additionally, the large number of functions provided by the Python's standard
+library prevent programmers from getting bogged down writing low-level code.
+This leads to fewer bugs in code and more reliable code. 
+	Connecting with other programs can also be achieved with little trouble. 
+To communicate with other programs, asyncio and a pipe or socket based
+approach would work well. asyncio provides abstractions for both, allowing
+for easy integration. Additionally, modules like sqlaclhemy allow for 
+easy communication between Python programs and SQL based databases.
+	Thus, a program written using asyncio would be relatively easy
+to maintain.
+
+
+Prototype:
+	To test the ease of use of this library, I wrote a prototype
+that deploys a server herd and interfaces with the Google places API.
+The prototype supports three forms of input: IAMAT statements
+indicating where a client is located, WHATSAT queries from a client
+asking for locations near their most recent lcoation, and AT statements
+for communicating between servers. 
+	To handle incoming connnections, I used asyncio.start_server(),
+which takes a function, ip address and port to listen on, and a loop
+to add tasks to. When the server hears an incoming connection, the 
+server routine function is called and added to the event loop. The event loop
+is capable of handling multiple incoming connections, all of which are 
+run concurrently. When 

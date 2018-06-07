@@ -83,3 +83,16 @@ INFO - 2018-06-05 21:58:24,640 - Received From ('127.0.0.1', 54533): "IAMAT Grah
 INFO - 2018-06-05 21:58:24,640 - To Client ('127.0.0.1', 54533): 'AT Goloman -91762830.27812362 Graham -34.068930+118.445127 1620023934.918963997'
 INFO - 2018-06-05 21:58:24,641 - Connected To Hands
 INFO - 2018-06-05 21:58:24,641 - Recipient: Hands Output: 'AT Goloman -91762830.27812362 Graham -34.068930+118.445127 1620023934.918963997 Goloman\n'
+INFO - 2018-06-06 20:39:50,557 - Started Goloman
+INFO - 2018-06-06 20:40:15,544 - New Connection: ('127.0.0.1', 58078)
+INFO - 2018-06-06 20:40:16,163 - Received From ('127.0.0.1', 58078): "IAMAT kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997"
+INFO - 2018-06-06 20:40:16,163 - To Client ('127.0.0.1', 58078): 'AT Goloman +8318881.244376809961059570312 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997'
+INFO - 2018-06-06 20:40:16,164 - Connected To Hands
+INFO - 2018-06-06 20:40:16,165 - Recipient: Hands Output: 'AT Goloman +8318881.244376809961059570312 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman\n'
+INFO - 2018-06-06 20:40:16,166 - New Connection: ('127.0.0.1', 58083)
+INFO - 2018-06-06 20:41:11,851 - Lost Connection: ('127.0.0.1', 58078)
+ERROR - 2018-06-06 20:41:11,870 - Task was destroyed but it is pending!
+task: <Task pending coro=<server_class.server_routine() done, defined at server.py:200> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x00000000039C5F48>()]>>
+INFO - 2018-06-06 20:41:11,871 - Lost Connection: ('127.0.0.1', 58083)
+ERROR - 2018-06-06 20:41:11,871 - Task was destroyed but it is pending!
+task: <Task pending coro=<server_class.server_routine() done, defined at server.py:200> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x00000000039F83A8>()]>>

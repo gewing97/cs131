@@ -6,6 +6,7 @@ import json
 import sys
 import re
 import logging
+import decimal
 
 def get_port_num(server_name):
     return {
@@ -31,11 +32,11 @@ def handle_latlon(lat_lon_str):
         pos_split = lat_lon.split("+")
         neg_split = lat_lon.split("-")
         if(len(pos_split) == 2):
-            lat = float(pos_split[0])
-            lon = float(pos_split[1])
+            lat = decimal.Decimal(pos_split[0])
+            lon = decimal.Decimal(pos_split[1])
         elif(len(neg_split) == 2):
-            lat = float(neg_split[0])
-            lon = float("-{0}".format(neg_split[1]))
+            lat = decimal.Decimal(neg_split[0])
+            lon = decimal.Decimal("-{0}".format(neg_split[1]))
         else:
             raise ValueError("invalid input")                                  
     elif(lat_lon_str[0] == "-"):
@@ -43,11 +44,11 @@ def handle_latlon(lat_lon_str):
         pos_split = lat_lon.split("+")
         neg_split = lat_lon.split("-")
         if(len(pos_split) == 2):
-            lat = float("-{0}".format(pos_split[0]))
-            lon = float(pos_split[1])
+            lat = decimal.Decimal("-{0}".format(pos_split[0]))
+            lon = decimal.Decimal(pos_split[1])
         elif(len(neg_split) == 2):
-            lat = float("-{0}".format(neg_split[0]))
-            lon = float("-{0}".format(neg_split[1]))
+            lat = decimal.Decimal("-{0}".format(neg_split[0]))
+            lon = decimal.Decimal("-{0}".format(neg_split[1]))
         else:
             raise ValueError("invalid input")         
     else:              
@@ -141,8 +142,8 @@ class server_class:
         try:
             if len(message) == 4:
                 lat, lon = handle_latlon(message[2])
-                skew = received_time - float(message[3])
-                skew_str = "+{0}".format(skew) if skew >= 0 else "{0}".format(skew)
+                skew = decimal.Decimal(received_time) - decimal.Decimal(message[3])
+                skew_str = "+{0}".format(str(skew)) if skew >= 0 else "{0}".format(str(skew))
                 response = "AT {0} {1} {2}".format(self.name,skew_str, " ".join(message[1:]))   
                 self.user_data[message[1]] = [self.name, skew_str, lat, lon, message[3]]
                 writer.write("{0}\n".format(response).encode())
@@ -193,7 +194,7 @@ class server_class:
         lat, lon = handle_latlon(message[4])
         #if unknown user or time + skew (absolute time) of message is greater than time + skew of recorded data
         if(message[3] not in self.user_data or \
-            (message[3] in self.user_data and (float(message[5]) + float(message[2])) > (float(self.user_data[message[3]][1]) + float(self.user_data[message[3]][4])))):
+            (message[3] in self.user_data and (decimal.Decimal(message[5]) + decimal.Decimal(message[2])) > (decimal.Decimal(self.user_data[message[3]][1]) + decimal.Decimal(self.user_data[message[3]][4])))):
             self.user_data[message[3]] = [message[1],message[2], lat, lon, message[5]]
 
     async def server_routine(self, reader, writer):

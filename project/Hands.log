@@ -36,3 +36,10 @@ INFO - 2018-06-05 21:48:44,298 - Started Hands
 INFO - 2018-06-05 21:58:13,925 - Started Hands
 INFO - 2018-06-05 21:58:24,641 - New Connection: ('127.0.0.1', 54535)
 INFO - 2018-06-05 21:58:24,641 - Received From ('127.0.0.1', 54535): "AT Goloman -91762830.27812362 Graham -34.068930+118.445127 1620023934.918963997 Goloman"
+INFO - 2018-06-05 22:58:46,468 - Lost Connection: ('127.0.0.1', 54535)
+INFO - 2018-06-06 20:39:54,945 - Started Hands
+INFO - 2018-06-06 20:40:16,164 - New Connection: ('127.0.0.1', 58079)
+INFO - 2018-06-06 20:40:16,165 - Received From ('127.0.0.1', 58079): "AT Goloman +8318881.244376809961059570312 kiwi.cs.ucla.edu +34.068930-118.445127 1520023934.918963997 Goloman"
+ERROR - 2018-06-06 20:41:11,871 - Task was destroyed but it is pending!
+task: <Task pending coro=<server_class.server_routine() running at server.py:210>>
+INFO - 2018-06-06 20:41:11,871 - Lost Connection: ('127.0.0.1', 58079)
