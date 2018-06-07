@@ -1,0 +1,40 @@
+Introduction
+
+Basic concept:
+    event driven programming
+
+Asyncio : playing well with others
+    -ease of use
+    -maintainability
+    -reliability
+    -gluing together with existign application
+
+Python concerns:
+    -type checking (dynamic strong typing)
+    -memory management 
+        -private heap
+        -object specific allocators
+        -no user control (good thing)
+    -multithreading (this isn't multithreading)
+        -asyncio is not in general threadsafe without further synchronization methods
+
+Python compared to Java:
+    Java approach?
+        -thread for each event?
+    simpler approach
+        liable to be slower (asyncio not actually concurrent)
+
+Problems encountered:
+    -concurrent handling of input and output
+        -eg vertical concurrency within tree
+    -
+
+comparison to node js
+    another event driven programming method
+
+Recommendation:
+    -depends on server herd
+        -only a couple cores available to application and MANY servers
+            -asyncio good option
+        -high quality servers, with high number of cores available to application:
+            -Java approach may provide better performance
