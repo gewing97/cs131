@@ -196,10 +196,7 @@ class server_class:
         lat, lon = handle_latlon(message[4])
         #if unknown user or time + skew (absolute time) of message is greater than time + skew of recorded data
         if(message[3] not in self.user_data or \
-                (message[3] in self.user_data and \
-                (decimal.Decimal(message[5]) + decimal.Decimal(message[2])) >\
-                (decimal.Decimal(self.user_data[message[3]][1]) + \
-                decimal.Decimal(self.user_data[message[3]][4])))):
+            (message[3] in self.user_data and (decimal.Decimal(message[5]) + decimal.Decimal(message[2])) > (decimal.Decimal(self.user_data[message[3]][1]) + decimal.Decimal(self.user_data[message[3]][4])))):
             self.user_data[message[3]] = [message[1],message[2], lat, lon, message[5]]
 
     async def server_routine(self, reader, writer):

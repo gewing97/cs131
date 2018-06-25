@@ -80,7 +80,6 @@ OCaml: (compiled)
 
 
 references:
-	https://ocaml.org/learn/
 	The OCaml system release 4.06 Documentation and user’s manual http://caml.inria.fr/pub/docs/manual-ocaml/
 	https://realworldocaml.org/v1/en/html/index.html (possibly cite the book instead)
 	https://github.com/LaurentMazare/tensorflow-ocaml/
@@ -90,7 +89,7 @@ references:
 
 	https://github.com/migueldeicaza/TensorFlowSharp
 	https://fsharp.org/specs/language-spec/4.1/FSharpSpec-4.1-latest.pdf //fsharp 4.1 language spec
-
+.NET Framework.” Wikipedia, Wikimedia Foundation, 8 June 2018, en.wikipedia.org/wiki/.NET_Framework.
 
 	https://en.wikipedia.org/wiki/.NET_Framework
 

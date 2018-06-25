@@ -214,3 +214,4 @@ thread and schedule functions concurrently with that thread.
 Like asyncio, Node.js is not designed for a multithreaded environement.
 Instead the ideal deployment is using many lightweight servers rather
 than heavy processes on a single server.  
+•   Webber, Adam Brooks. Modern Programming Languages: a Practical Introduction. Franklin, Beedle & Associates, 2011
